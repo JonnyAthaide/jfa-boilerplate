@@ -1,7 +1,6 @@
 # Changelog
 
-## v0.0.1
-- Planejamento
-- Roadmap
-- Manifesto
-- ADRs iniciais
+## Sprint 01
+
+### Commit 001
+- Estrutura inicial do projeto.
