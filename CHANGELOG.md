@@ -53,3 +53,21 @@
 - PROJECT_STATUS atualizado
 
 ---
+
+### Commit 004
+
+#### Added
+
+- Logger Service
+- Storage Service
+- DOM Service
+
+#### Changed
+
+- App utiliza Logger para mensagens internas
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
