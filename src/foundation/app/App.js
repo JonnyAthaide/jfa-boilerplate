@@ -1,20 +1,23 @@
-import { Config } from "../config";
+import { Router } from "../router";
+import { Logger } from "../services";
 
 export class App {
 
     constructor() {
-        this.config = Config;
+
+        this.router = new Router();
+
     }
 
     init() {
 
-        console.group(this.config.appName);
+        Logger.info("Application started.");
 
-        console.info("JFA Foundation iniciada.");
+        this.router.register("/", () => {
+            Logger.info("Home");
+        });
 
-        console.table(this.config);
-
-        console.groupEnd();
+        this.router.navigate("/");
 
     }
 

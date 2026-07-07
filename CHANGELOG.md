@@ -71,3 +71,21 @@
 - PROJECT_STATUS atualizado
 
 ---
+
+### Commit 005
+
+#### Added
+
+- Router Service
+- Registro de rotas
+- Navegação programática
+
+#### Changed
+
+- App inicializa o Router
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
