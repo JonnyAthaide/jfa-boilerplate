@@ -1,5 +1,3 @@
-# Hachi Sushi v2
+# JFA
 
-Projeto base da JFA.
-
-Status: Sprint 00 concluída.
+JSA Frontend Architecture.
