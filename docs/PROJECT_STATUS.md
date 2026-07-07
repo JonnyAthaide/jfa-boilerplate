@@ -18,11 +18,11 @@ Sprint
 
 Último Commit
 
-002
+003
 
 Próximo
 
-003
+004
 
 ---
 
@@ -32,7 +32,7 @@ Próximo
 
 ✔ Commit 002
 
-⬜ Commit 003
+✔ Commit 003
 
 ⬜ Commit 004
 
@@ -52,7 +52,7 @@ Sprints
 
 Commits
 
-2
+3
 
 Releases
 

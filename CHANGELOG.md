@@ -31,3 +31,25 @@
 #### Documentation
 
 - PROJECT_STATUS
+
+---
+
+### Commit 003
+
+#### Added
+
+- Classe App
+- Bootstrap da aplicação
+- Configuração central
+- Constantes globais
+
+#### Changed
+
+- Foundation passa a possuir Core próprio
+- main.js tornou-se apenas ponto de entrada
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
