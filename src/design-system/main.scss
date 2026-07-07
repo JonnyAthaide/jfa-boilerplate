@@ -1,0 +1,27 @@
+/*
+|--------------------------------------------------------------------------
+| JFA Foundation
+|--------------------------------------------------------------------------
+*/
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";
+
+/*
+|--------------------------------------------------------------------------
+| Foundation
+|--------------------------------------------------------------------------
+*/
+
+@import "abstracts/variables";
+
+@import "base/reset";
+@import "base/base";
+
+@import "layout/layout";
+
+@import "components/components";
+
+@import "utilities/utilities";
+
+@import "pages/home";
