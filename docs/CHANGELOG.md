@@ -106,3 +106,16 @@
 - PROJECT_STATUS atualizado
 
 ---
+
+### Commit 007
+
+#### Added
+
+- HTTP Client
+- Métodos GET, POST, PUT e DELETE
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---

@@ -2,6 +2,7 @@ import { Config } from "../config";
 import { Logger } from "../services";
 import { Router } from "../router";
 import { EventBus } from "../events";
+import { Http } from "../http";
 
 export class App {
 

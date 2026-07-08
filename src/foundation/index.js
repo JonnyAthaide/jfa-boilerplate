@@ -8,3 +8,4 @@ export { Config } from "./config";
 export * from "./services";
 export * from "./router";
 export * from "./events";
+export * from "./http";
