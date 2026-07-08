@@ -11,3 +11,4 @@ export * from "./events";
 export * from "./http";
 export * from "./plugin-manager";
 export * from "./error-handler";
+export * from "./lifecycle";

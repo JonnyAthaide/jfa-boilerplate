@@ -153,3 +153,21 @@
 - PROJECT_STATUS atualizado
 
 ---
+
+### Commit 010
+
+#### Added
+
+- Lifecycle
+- beforeStart()
+- afterStart()
+
+#### Changed
+
+- App passa a utilizar o Lifecycle durante a inicialização
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---

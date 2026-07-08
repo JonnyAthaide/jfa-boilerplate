@@ -5,6 +5,7 @@ import { EventBus } from "../events";
 import { Http } from "../http";
 import { PluginManager } from "../plugin-manager";
 import { ErrorHandler } from "../error-handler";
+import { Lifecycle } from "../lifecycle";
 
 export class App {
 
@@ -14,11 +15,24 @@ export class App {
         this.router = new Router();
         this.events = new EventBus();
         this.plugins = new PluginManager();
+        this.lifecycle = new Lifecycle();
     }
 
-    init() {
+    async init() {
 
         Logger.info("JFA Foundation iniciada.");
+
+        this.lifecycle.beforeStart(() => {
+
+            Logger.info("Lifecycle beforeStart");
+
+        });
+
+        this.lifecycle.afterStart(() => {
+
+            Logger.info("Lifecycle afterStart");
+
+        });
 
         this.events.on("app:init", () => {
 
@@ -26,19 +40,19 @@ export class App {
 
         });
 
-        this.events.emit("app:init");
-
         this.router.register("/", () => {
 
             Logger.info("Home");
 
         });
 
-        this.router.navigate("/");
-
         this.plugins.register("jquery", window.jQuery);
 
-        Logger.info("Plugin Manager iniciado.");
+        await this.lifecycle.start();
+
+        this.events.emit("app:init");
+
+        this.router.navigate("/");
 
         ErrorHandler.execute(() => {
 
