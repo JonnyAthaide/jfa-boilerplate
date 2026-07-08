@@ -64,9 +64,7 @@ foundation/
 ├── config/
 ├── router/
 ├── services/
-├── helpers/
-├── plugins/
-└── core/
+
 ```
 
 ## app/

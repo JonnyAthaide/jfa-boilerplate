@@ -1,10 +1,25 @@
 # Backlog
 
-- Sprint 01 Foundation
-- Sprint 02 Design System
-- Sprint 03 SCSS
-- Sprint 04 JavaScript
-- Sprint 05 HTML
-- Sprint 06 Performance
-- Sprint 07 SEO
-- Sprint 08 Release
+## Alta prioridade
+
+- EventBus
+- Http Service
+- Plugin Manager
+
+## Média prioridade
+
+- Theme Service
+- Clipboard Service
+- Device Service
+
+## Baixa prioridade
+
+- Internacionalização
+- Telemetria
+- Debug Tools
+
+Cada item deve conter:
+
+- Objetivo
+- Motivação
+- Sprint sugerida
