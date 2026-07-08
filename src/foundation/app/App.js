@@ -3,6 +3,7 @@ import { Logger } from "../services";
 import { Router } from "../router";
 import { EventBus } from "../events";
 import { Http } from "../http";
+import { PluginManager } from "../plugin-manager";
 
 export class App {
 
@@ -11,6 +12,7 @@ export class App {
         this.config = Config;
         this.router = new Router();
         this.events = new EventBus();
+        this.plugins = new PluginManager();
     }
 
     init() {
@@ -32,6 +34,10 @@ export class App {
         });
 
         this.router.navigate("/");
+
+        this.plugins.register("jquery", window.jQuery);
+
+        Logger.info("Plugin Manager iniciado.");
 
     }
 

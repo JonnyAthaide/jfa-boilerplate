@@ -119,3 +119,20 @@
 - PROJECT_STATUS atualizado
 
 ---
+
+### Commit 008
+
+#### Added
+
+- Plugin Manager
+- Registro de plugins
+
+#### Changed
+
+- App inicializa o Plugin Manager
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
