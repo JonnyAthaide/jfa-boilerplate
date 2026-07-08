@@ -136,3 +136,20 @@
 - PROJECT_STATUS atualizado
 
 ---
+
+### Commit 009
+
+#### Added
+
+- Error Handler
+- Execução protegida por try/catch
+
+#### Changed
+
+- Foundation passa a centralizar tratamento de erros
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---

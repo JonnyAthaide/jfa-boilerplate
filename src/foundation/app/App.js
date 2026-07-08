@@ -4,6 +4,7 @@ import { Router } from "../router";
 import { EventBus } from "../events";
 import { Http } from "../http";
 import { PluginManager } from "../plugin-manager";
+import { ErrorHandler } from "../error-handler";
 
 export class App {
 
@@ -38,6 +39,12 @@ export class App {
         this.plugins.register("jquery", window.jQuery);
 
         Logger.info("Plugin Manager iniciado.");
+
+        ErrorHandler.execute(() => {
+
+            Logger.info("ErrorHandler iniciado.");
+
+        });
 
     }
 
