@@ -8,21 +8,17 @@ Versão
 
 Capítulo
 
-01 Foundation
+01 Foundation ✅
 
 Sprint
 
-01
+01 ✅
 
 ---
 
 Último Commit
 
-010
-
-Próximo
-
-011
+012
 
 ---
 
@@ -38,8 +34,8 @@ Próximo
 ✔ Commit 008
 ✔ Commit 009
 ✔ Commit 010
-
-⬜ Commit 011
+✔ Commit 011
+✔ Commit 012
 
 ---
 
@@ -47,15 +43,15 @@ Próximo
 
 Capítulos
 
-0/5
+1/5
 
-Sprints
+Próximo
 
-0
+Capítulo 02
 
 Commits
 
-10
+12
 
 Releases
 
