@@ -1,58 +1,63 @@
-# Project Status
+# PROJECT STATUS
 
-Versão
+## Release Atual
 
-0.1.0-dev
+✅ v0.1.0-foundation
 
----
+Status
 
-Capítulo
-
-01 Foundation ✅
-
-Sprint
-
-01 ✅
+Concluída
 
 ---
 
-Último Commit
+## Próxima Release
 
-012
+🚧 v0.2.0-design-system
 
----
+Status
 
-## Sprint
-
-✔ Commit 001
-✔ Commit 002
-✔ Commit 003
-✔ Commit 004
-✔ Commit 005
-✔ Commit 006
-✔ Commit 007
-✔ Commit 008
-✔ Commit 009
-✔ Commit 010
-✔ Commit 011
-✔ Commit 012
+Em desenvolvimento
 
 ---
 
-## Estatísticas
+## Capítulo 01 — Foundation
 
-Capítulos
+Status
 
-1/5
-
-Próximo
-
-Capítulo 02
+✅ Concluído
 
 Commits
 
-12
+✔ CH01-001
+✔ CH01-002
+✔ CH01-003
+✔ CH01-004
+✔ CH01-005
+✔ CH01-006
+✔ CH01-007
+✔ CH01-008
+✔ CH01-009
+✔ CH01-010
+✔ CH01-011
+✔ CH01-012
 
-Releases
+---
 
-0
+## Capítulo 02 — Design System
+
+Status
+
+🚧 Em andamento
+
+Commits
+
+⬜ CH02-001 Design Tokens
+⬜ CH02-002 Colors
+⬜ CH02-003 Typography
+⬜ CH02-004 Spacing
+⬜ CH02-005 Radius
+⬜ CH02-006 Shadows
+⬜ CH02-007 Breakpoints
+⬜ CH02-008 Container
+⬜ CH02-009 Helpers
+⬜ CH02-010 Documentation

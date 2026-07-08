@@ -1,8 +1,12 @@
 # Changelog
 
-## Sprint 01
+---
 
-### Commit 001
+# v0.1.0-foundation
+
+## Capítulo 01 — Foundation
+
+### CH01-001
 
 #### Added
 
@@ -11,7 +15,7 @@
 
 ---
 
-### Commit 002
+### CH01-002
 
 #### Added
 
@@ -30,11 +34,11 @@
 
 #### Documentation
 
-- PROJECT_STATUS
+- PROJECT_STATUS atualizado
 
 ---
 
-### Commit 003
+### CH01-003
 
 #### Added
 
@@ -54,7 +58,7 @@
 
 ---
 
-### Commit 004
+### CH01-004
 
 #### Added
 
@@ -72,7 +76,7 @@
 
 ---
 
-### Commit 005
+### CH01-005
 
 #### Added
 
@@ -90,7 +94,7 @@
 
 ---
 
-### Commit 006
+### CH01-006
 
 #### Added
 
@@ -107,12 +111,16 @@
 
 ---
 
-### Commit 007
+### CH01-007
 
 #### Added
 
 - HTTP Client
-- Métodos GET, POST, PUT e DELETE
+
+- Métodos GET
+- POST
+- PUT
+- DELETE
 
 #### Documentation
 
@@ -120,7 +128,7 @@
 
 ---
 
-### Commit 008
+### CH01-008
 
 #### Added
 
@@ -137,7 +145,7 @@
 
 ---
 
-### Commit 009
+### CH01-009
 
 #### Added
 
@@ -154,7 +162,7 @@
 
 ---
 
-### Commit 010
+### CH01-010
 
 #### Added
 
@@ -172,7 +180,7 @@
 
 ---
 
-### Commit 011
+### CH01-011
 
 #### Changed
 
@@ -184,12 +192,18 @@
 
 ---
 
-### Foundation Freeze
+### CH01-012
 
 #### Release
 
 - Foundation concluída
 - Arquitetura consolidada
-- Preparada para o Capítulo 02
+- Base preparada para o Design System
 
 ---
+
+# v0.2.0-design-system
+
+## Capítulo 02 — Design System
+
+> Em desenvolvimento
