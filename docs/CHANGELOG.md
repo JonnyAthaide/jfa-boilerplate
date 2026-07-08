@@ -89,3 +89,20 @@
 - PROJECT_STATUS atualizado
 
 ---
+
+### Commit 006
+
+#### Added
+
+- EventBus
+- Sistema de eventos interno
+
+#### Changed
+
+- App inicializa EventBus
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
