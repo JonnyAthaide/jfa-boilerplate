@@ -1,0 +1,74 @@
+/*
+|--------------------------------------------------------------------------
+| Typography Tokens
+|--------------------------------------------------------------------------
+| Primitive Tokens
+|--------------------------------------------------------------------------
+*/
+
+/* Font Families */
+$font-family-base: "Inter", sans-serif;
+$font-family-heading: "Inter", sans-serif;
+$font-family-monospace: "Fira Code", monospace;
+
+/* Font Weights */
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+/*
+|--------------------------------------------------------------------------
+| Font Sizes
+|--------------------------------------------------------------------------
+*/
+
+$font-size-xs: .75rem;     // 12px
+$font-size-sm: .875rem;    // 14px
+$font-size-md: 1rem;       // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+$font-size-5xl: 3rem;      // 48px
+
+/*
+|--------------------------------------------------------------------------
+| Line Heights
+|--------------------------------------------------------------------------
+*/
+
+$line-height-tight: 1.2;
+$line-height-base: 1.5;
+$line-height-relaxed: 1.75;
+
+/*
+|--------------------------------------------------------------------------
+| Letter Spacing
+|--------------------------------------------------------------------------
+*/
+
+$letter-spacing-tight: -0.02em;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: .05em;
+
+/*
+|--------------------------------------------------------------------------
+| Semantic Tokens
+|--------------------------------------------------------------------------
+*/
+
+$font-body: $font-family-base;
+$font-heading: $font-family-heading;
+
+$font-size-body: $font-size-md;
+$font-size-caption: $font-size-sm;
+$font-size-lead: $font-size-lg;
+
+$font-weight-body: $font-weight-regular;
+$font-weight-heading: $font-weight-bold;
+
+$line-height-body: $line-height-base;
+$line-height-heading: $line-height-tight;

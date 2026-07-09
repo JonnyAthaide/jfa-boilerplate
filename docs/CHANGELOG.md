@@ -221,3 +221,19 @@
 #### Documentation
 
 - PROJECT_STATUS atualizado
+
+---
+
+### CH02-003
+
+#### Added
+
+- Typography Tokens
+- Font Scale
+- Font Weights
+- Line Heights
+- Bootstrap Typography Wrapper
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
