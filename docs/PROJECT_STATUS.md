@@ -10,13 +10,13 @@ Concluída
 
 ---
 
-## Próxima Release
+## Release Atual
 
-🚧 v0.2.0-design-system
+✅ v0.2.0-design-system
 
 Status
 
-Em desenvolvimento
+Concluída
 
 ---
 
@@ -47,7 +47,7 @@ Commits
 
 Status
 
-🚧 Em andamento
+✅ Concluído
 
 Commits
 
@@ -60,4 +60,15 @@ Commits
 ✔ CH02-007 Breakpoints & Containers
 ✔ CH02-008 Motion
 ✔ CH02-009 Helpers
-⬜ CH02-010 Documentation
+✔ CH02-010 Chapter Review
+
+
+---
+
+## Próxima Release
+
+🚧 v0.3.0-components
+
+Status
+
+Aguardando início

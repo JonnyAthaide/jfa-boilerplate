@@ -51,7 +51,17 @@ Sprint 01
 
 Sprint 02
 
-...
+---
+
+## Releases
+
+| Release | Status |
+|----------|--------|
+| v0.1.0 Foundation | ✅ |
+| v0.2.0 Design System | ✅ |
+| v0.3.0 Components | 🚧 |
+
+---
 
 
 ## Hierarquia da documentação
@@ -69,3 +79,10 @@ Sprint 02
 | 05-folder-structure.md | Organização             | Apenas quando mudar                    |
 | 06-backlog.md          | Backlog                 | Sempre que necessário                  |
 | decisions/             | Decisões permanentes    | Apenas novas decisões                  |
+
+
+## Known Issues
+
+Atualmente o Bootstrap 5 utiliza a sintaxe Sass @import, que foi descontinuada pelo Dart Sass.
+
+Esses warnings são esperados e serão eliminados quando o framework migrar para Bootstrap 6 ou quando o Bootstrap oficial remover o uso de @import.

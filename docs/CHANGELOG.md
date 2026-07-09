@@ -324,3 +324,37 @@
 
 ---
 
+### CH02-010
+
+#### Review
+
+- Revisão final do Design System.
+- Validação da arquitetura.
+- Preparação da Release v0.2.0-design-system.
+
+---
+
+## Release
+
+### v0.2.0-design-system
+
+#### Added
+
+- Design Tokens
+- Bootstrap Wrapper
+- Typography
+- Spacing
+- Radius
+- Shadows
+- Motion
+- Breakpoints
+- Helpers
+
+#### Changed
+
+- Estrutura do Design System consolidada.
+
+#### Documentation
+
+- PROJECT_STATUS atualizado.
+- Encerramento do Capítulo 02.

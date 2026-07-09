@@ -83,3 +83,14 @@ Separar navegação de composição visual.
 Objetivo
 
 Congelar APIs públicas e preparar a versão 1.0.
+
+
+
+
+
+v1.0
+
+Migrar todo o framework para
+
+@use
+@forward
