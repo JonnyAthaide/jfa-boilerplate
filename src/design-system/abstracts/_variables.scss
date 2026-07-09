@@ -52,3 +52,18 @@ $border-radius-sm: $radius-sm;
 $border-radius-lg: $radius-lg;
 $border-radius-xl: $radius-xl;
 $border-radius-pill: $radius-pill;
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Shadows
+|--------------------------------------------------------------------------
+*/
+
+$box-shadow: $shadow-md;
+$box-shadow-sm: $shadow-sm;
+$box-shadow-lg: $shadow-lg;
+
+$btn-box-shadow: $shadow-button;
+$input-box-shadow: none;
+$input-focus-box-shadow: $shadow-focus;

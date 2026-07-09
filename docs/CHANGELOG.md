@@ -265,3 +265,19 @@
 #### Documentation
 
 - PROJECT_STATUS atualizado
+
+---
+
+### CH02-006
+
+#### Added
+
+- Shadow Tokens
+- Semantic Shadow Tokens
+- Bootstrap Shadow Wrapper
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
