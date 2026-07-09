@@ -207,3 +207,17 @@
 ## Capítulo 02 — Design System
 
 > Em desenvolvimento
+
+---
+
+### CH02-002
+
+#### Added
+
+- Primitive Color Tokens
+- Semantic Color Tokens
+- Brand Color Palette
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
