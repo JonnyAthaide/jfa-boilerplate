@@ -251,3 +251,17 @@
 #### Documentation
 
 - PROJECT_STATUS atualizado
+
+---
+
+### CH02-005
+
+#### Added
+
+- Border Radius Tokens
+- Semantic Radius Tokens
+- Bootstrap Radius Wrapper
+
+#### Documentation
+
+- PROJECT_STATUS atualizado

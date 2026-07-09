@@ -1,0 +1,38 @@
+/*
+|--------------------------------------------------------------------------
+| Radius Tokens
+|--------------------------------------------------------------------------
+| Primitive Tokens
+|--------------------------------------------------------------------------
+*/
+
+$radius-none: 0;
+
+$radius-xs: .125rem;   // 2px
+$radius-sm: .25rem;    // 4px
+$radius-md: .5rem;     // 8px
+$radius-lg: .75rem;    // 12px
+$radius-xl: 1rem;      // 16px
+$radius-2xl: 1.5rem;   // 24px
+
+$radius-pill: 9999px;
+
+$radius-circle: 50%;
+
+/*
+|--------------------------------------------------------------------------
+| Semantic Tokens
+|--------------------------------------------------------------------------
+*/
+
+$radius-button: $radius-md;
+
+$radius-card: $radius-lg;
+
+$radius-input: $radius-md;
+
+$radius-modal: $radius-xl;
+
+$radius-avatar: $radius-circle;
+
+$radius-badge: $radius-pill;
