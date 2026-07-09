@@ -91,3 +91,14 @@ $container-max-widths: (
     xl: $container-xl,
     xxl: $container-xxl
 );
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Motion
+|--------------------------------------------------------------------------
+*/
+
+$transition-base: all $motion-normal $ease-in-out;
+$transition-fade: opacity $motion-fast linear;
+$transition-collapse: height $motion-normal ease;

@@ -1,0 +1,52 @@
+/*
+|--------------------------------------------------------------------------
+| Motion Tokens
+|--------------------------------------------------------------------------
+| Primitive Tokens
+|--------------------------------------------------------------------------
+*/
+
+/* Duration */
+
+$motion-instant: 0ms;
+$motion-fast: 150ms;
+$motion-normal: 250ms;
+$motion-slow: 400ms;
+$motion-slower: 600ms;
+
+/*
+|--------------------------------------------------------------------------
+| Easings
+|--------------------------------------------------------------------------
+*/
+
+$ease-linear: linear;
+
+$ease-in: ease-in;
+
+$ease-out: ease-out;
+
+$ease-in-out: ease-in-out;
+
+/*
+|--------------------------------------------------------------------------
+| Semantic Tokens
+|--------------------------------------------------------------------------
+*/
+
+$transition-button: $motion-fast;
+
+$transition-input: $motion-fast;
+
+$transition-card: $motion-normal;
+
+$transition-modal: $motion-normal;
+
+$transition-dropdown: $motion-fast;
+
+$transition-page: $motion-slow;
+
+$transition-default:
+    all
+    $motion-normal
+    $ease-in-out;

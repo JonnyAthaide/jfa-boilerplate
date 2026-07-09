@@ -295,3 +295,18 @@
 - PROJECT_STATUS atualizado
 
 ---
+
+### CH02-008
+
+#### Added
+
+- Motion Tokens
+- Transition Tokens
+- Bootstrap Motion Wrapper
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
+
