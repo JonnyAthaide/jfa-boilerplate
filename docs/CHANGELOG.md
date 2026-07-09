@@ -281,3 +281,17 @@
 - PROJECT_STATUS atualizado
 
 ---
+
+### CH02-007
+
+#### Added
+
+- Breakpoint Tokens
+- Container Width Tokens
+- Bootstrap Breakpoint Wrapper
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---

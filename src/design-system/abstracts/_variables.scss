@@ -67,3 +67,27 @@ $box-shadow-lg: $shadow-lg;
 $btn-box-shadow: $shadow-button;
 $input-box-shadow: none;
 $input-focus-box-shadow: $shadow-focus;
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Breakpoints
+|--------------------------------------------------------------------------
+*/
+
+$grid-breakpoints: (
+    xs: $breakpoint-xs,
+    sm: $breakpoint-sm,
+    md: $breakpoint-md,
+    lg: $breakpoint-lg,
+    xl: $breakpoint-xl,
+    xxl: $breakpoint-xxl
+);
+
+$container-max-widths: (
+    sm: $container-sm,
+    md: $container-md,
+    lg: $container-lg,
+    xl: $container-xl,
+    xxl: $container-xxl
+);

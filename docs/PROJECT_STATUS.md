@@ -57,7 +57,7 @@ Commits
 ✔ CH02-004 Spacing
 ✔ CH02-005 Radius
 ✔ CH02-006 Shadows
-⬜ CH02-007 Breakpoints
+✔ CH02-007 Breakpoints
 ⬜ CH02-008 Container
 ⬜ CH02-009 Helpers
 ⬜ CH02-010 Documentation
