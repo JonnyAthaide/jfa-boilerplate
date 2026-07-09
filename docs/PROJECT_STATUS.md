@@ -59,5 +59,5 @@ Commits
 ✔ CH02-006 Shadows
 ✔ CH02-007 Breakpoints & Containers
 ✔ CH02-008 Motion
-⬜ CH02-009 Helpers
+✔ CH02-009 Helpers
 ⬜ CH02-010 Documentation

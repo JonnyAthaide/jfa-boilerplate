@@ -310,3 +310,17 @@
 
 ---
 
+### CH02-009
+
+#### Added
+
+- Global Helper Classes
+- Accessibility Helpers
+- Interaction Helpers
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
+
