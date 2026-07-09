@@ -21,3 +21,21 @@ $font-size-base: $font-size-body;
 $font-weight-base: $font-weight-body;
 
 $line-height-base: $line-height-body;
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Spacing
+|--------------------------------------------------------------------------
+*/
+
+$spacer: $space-4;
+
+$spacers: (
+    0: $space-0,
+    1: $space-1,
+    2: $space-2,
+    3: $space-3,
+    4: $space-4,
+    5: $space-5
+);

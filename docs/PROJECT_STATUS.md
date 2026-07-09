@@ -54,7 +54,7 @@ Commits
 ✔ CH02-001 Design Tokens
 ✔ CH02-002 Colors
 ✔ CH02-003 Typography
-⬜ CH02-004 Spacing
+✔ CH02-004 Spacing
 ⬜ CH02-005 Radius
 ⬜ CH02-006 Shadows
 ⬜ CH02-007 Breakpoints

@@ -237,3 +237,17 @@
 #### Documentation
 
 - PROJECT_STATUS atualizado
+
+---
+
+### CH02-004
+
+#### Added
+
+- Spacing Tokens
+- Layout Spacing Tokens
+- Bootstrap Spacing Wrapper
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
