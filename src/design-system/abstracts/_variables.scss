@@ -1,0 +1,104 @@
+/*
+|--------------------------------------------------------------------------
+| Variáveis globais
+|--------------------------------------------------------------------------
+*/
+
+$font-family-base: system-ui, sans-serif;
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Typography
+|--------------------------------------------------------------------------
+*/
+
+$font-family-sans-serif: $font-family-base;
+$font-family-monospace: $font-family-monospace;
+
+$font-size-base: $font-size-body;
+
+$font-weight-base: $font-weight-body;
+
+$line-height-base: $line-height-body;
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Spacing
+|--------------------------------------------------------------------------
+*/
+
+$spacer: $space-4;
+
+$spacers: (
+    0: $space-0,
+    1: $space-1,
+    2: $space-2,
+    3: $space-3,
+    4: $space-4,
+    5: $space-5
+);
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Radius
+|--------------------------------------------------------------------------
+*/
+
+$border-radius: $radius-md;
+$border-radius-sm: $radius-sm;
+$border-radius-lg: $radius-lg;
+$border-radius-xl: $radius-xl;
+$border-radius-pill: $radius-pill;
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Shadows
+|--------------------------------------------------------------------------
+*/
+
+$box-shadow: $shadow-md;
+$box-shadow-sm: $shadow-sm;
+$box-shadow-lg: $shadow-lg;
+
+$btn-box-shadow: $shadow-button;
+$input-box-shadow: none;
+$input-focus-box-shadow: $shadow-focus;
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Breakpoints
+|--------------------------------------------------------------------------
+*/
+
+$grid-breakpoints: (
+    xs: $breakpoint-xs,
+    sm: $breakpoint-sm,
+    md: $breakpoint-md,
+    lg: $breakpoint-lg,
+    xl: $breakpoint-xl,
+    xxl: $breakpoint-xxl
+);
+
+$container-max-widths: (
+    sm: $container-sm,
+    md: $container-md,
+    lg: $container-lg,
+    xl: $container-xl,
+    xxl: $container-xxl
+);
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Motion
+|--------------------------------------------------------------------------
+*/
+
+$transition-base: all $motion-normal $ease-in-out;
+$transition-fade: opacity $motion-fast linear;
+$transition-collapse: height $motion-normal ease;
