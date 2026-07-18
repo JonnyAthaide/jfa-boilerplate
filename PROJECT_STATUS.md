@@ -71,4 +71,13 @@ Commits
 
 Status
 
-Aguardando início
+Release v0.3.0 — Components
+
+✅ Commit 01
+Refatoração da estrutura da documentação
+
+✅ Commit 02
+Formalização da Arquitetura
+
+⏳ Commit 03
+Auditoria da implementação
