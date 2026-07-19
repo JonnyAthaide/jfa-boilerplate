@@ -102,3 +102,19 @@ $container-max-widths: (
 $transition-base: all $motion-normal $ease-in-out;
 $transition-fade: opacity $motion-fast linear;
 $transition-collapse: height $motion-normal ease;
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Colors
+|--------------------------------------------------------------------------
+*/
+
+$primary: $color-primary;
+$secondary: $color-secondary;
+$success: $color-success;
+$danger: $color-danger;
+$warning: $color-warning;
+$info: $color-info;
+// $light: $color-light;
+// $dark: $color-dark;

@@ -358,3 +358,30 @@
 
 - PROJECT_STATUS atualizado.
 - Encerramento do Capítulo 02.
+
+---
+
+# v0.3.0-components
+
+## Capítulo 03 — Components
+
+> Em desenvolvimento
+
+---
+
+### CH03-001
+
+#### Added
+
+- Button component (HTML, SCSS, JS, README)
+- Tokens `$color-brand` e `$color-neutral`
+
+#### Changed
+
+- Barrel exports de `components` e `components/button` passam a exportar a classe `Button`
+- `src/components/_index.scss` passa a usar `@import`, consistente com o restante do projeto (migração para `@use`/`@forward` fica para a v1.0, conforme roadmap)
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+- Bug de ordem de import do Bootstrap (customização de cor/fonte não aplicada) registrado em `notes/bugs.md`, pendente para o fim do capítulo

@@ -81,3 +81,6 @@ Formalização da Arquitetura
 
 ⏳ Commit 03
 Auditoria da implementação
+
+✅ CH03-001
+Button — primeiro componente (HTML, SCSS, JS, README)

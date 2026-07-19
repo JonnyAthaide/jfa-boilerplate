@@ -1,0 +1,52 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-2;
+}
+
+.btn-brand {
+    @include button-variant($color-brand, $color-brand);
+}
+
+.btn-neutral {
+    @include button-variant($color-neutral, $color-neutral);
+}
+
+.btn__icon {
+    display: inline-flex;
+    line-height: 0;
+}
+
+.btn__label {
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn__spinner {
+    display: none;
+    width: 1em;
+    height: 1em;
+    border: .15em solid currentColor;
+    border-right-color: transparent;
+    border-radius: $radius-circle;
+    animation: btn-spin $motion-slower linear infinite;
+}
+
+.btn.is-loading {
+    pointer-events: none;
+
+    .btn__label {
+        opacity: .6;
+    }
+
+    .btn__spinner {
+        display: inline-block;
+    }
+}
+
+@keyframes btn-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

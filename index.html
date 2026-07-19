@@ -9,7 +9,80 @@
 
 <body>
 
-  <div id="app"></div>
+  <div id="app">
+
+    <header class="sandbox-header">
+      <h1>JFA Framework</h1>
+      <p>Sandbox • v0.3.0 – Components</p>
+    </header>
+
+    <main class="sandbox">
+
+      <section class="sandbox-section">
+
+        <h2>Button</h2>
+
+        <button class="btn">
+          Default
+        </button>
+
+        <button class="btn btn-primary">primary</button>
+        <button class="btn btn-secondary">secondary</button>
+        <button class="btn btn-success">success</button>
+        <button class="btn btn-danger">danger</button>
+        <button class="btn btn-warning">warning</button>
+        <button class="btn btn-info">info</button>
+        <button class="btn btn-light">light</button>
+        <button class="btn btn-dark">dark</button>
+        <button class="btn btn-link">link</button>
+
+        <button class="btn btn-primary is-loading">is loading</button>
+
+        <button class="btn btn-brand">Brand</button>
+        <button class="btn btn-neutral">Neutral</button>
+
+        <button class="btn btn-primary">
+
+          <span class="btn__icon">
+            <i class="bi bi-download"></i>
+          </span>
+
+          <span class="btn__label">
+            Salvar
+          </span>
+
+        </button>
+
+        <button class="btn btn-primary">
+          <span class="btn__label">
+            Próximo
+          </span>
+
+          <span class="btn__icon">
+            <i class="bi bi-arrow-right"></i>
+          </span>
+        </button>
+
+        <button class="btn btn-primary is-loading">
+
+          <span class="btn__spinner"></span>
+
+          <span class="btn__label">
+            Salvando...
+          </span>
+
+        </button>
+
+        <div class="jf-command-palette">command-palette</div>
+        <div class="jf-empty-state">empty-state</div>
+        <div class="jf-page-loader">page-loader</div>
+        <div class="jf-skeleton">skeleton</div>
+
+      </section>
+
+    </main>
+
+  </div>
 
   <script type="module" src="/src/main.js"></script>
 
