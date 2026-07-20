@@ -128,3 +128,24 @@ Commits
 ✔ CH04-005 — Hero (migra o `.hero` órfão de `design-system/pages/_home.scss`, removido)
 ✔ CH04-006 — Sidebar
 ✔ CH04-007 — Navbar — open/close/toggle sobre `bootstrap.Collapse`
+
+---
+
+## Próxima Release
+
+🚧 v0.5.0-features
+
+Status
+
+Release v0.5.0 — Features
+
+## Capítulo 05 — Features
+
+Status
+
+🟡 Em andamento
+
+Commits
+
+✔ Documentação prévia — `17-feature-specification.md`
+✔ CH05-001 — Toast System (pathfinder) — `ToastSystem.show()` sobre `bootstrap.Toast`

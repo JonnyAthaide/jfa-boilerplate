@@ -1,0 +1,4 @@
+// .toast já herda radius/shadow do Bootstrap, corretamente configurados
+// via _variables.scss ($border-radius/$box-shadow). Cor usa .text-bg-*,
+// já existente em src/components/badge/badge.scss (inclusive brand/neutral).
+// Nada pra sobrepor aqui.

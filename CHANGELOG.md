@@ -599,3 +599,26 @@ Capítulo 03 encerrado — 6 componentes (Button, Badge, Card, Alert, Breadcrumb
 ### v0.4.0-layout
 
 Capítulo 04 encerrado — 7 peças de Layout (Header, Footer, Main, Section, Hero, Sidebar, Navbar), com spec própria (`16-layout-specification.md`) documentada antes da implementação.
+
+---
+
+# v0.5.0-features
+
+## Capítulo 05 — Features
+
+> Em desenvolvimento
+
+---
+
+### CH05-001
+
+#### Added
+
+- `docs/architecture/17-feature-specification.md`: contrato oficial das Features, espelhando `15-component-specification.md`/`16-layout-specification.md` — adaptado pra permitir Features sem `.html` estático (markup gerado em runtime, documentado no README)
+- Toast System (pathfinder) — `ToastSystem.show(message, { variant, delay })`, reaproveita `bootstrap.Toast` e as variantes `.text-bg-*` (incluindo `brand`/`neutral`) já criadas no Badge
+- `src/features/` — novo diretório, barrel `index.js`/`_index.scss` conectado em `main.js`/`main.scss` (mesmo padrão de `src/components`/`src/layouts`)
+
+#### Documentation
+
+- `toast.js` monta o markup via `document.createElement`/`textContent`, não `innerHTML` — mesma lição aplicada na correção do `Breadcrumb` durante a auditoria do CH03, agora também escrita como anti-pattern na spec de Features
+- PROJECT_STATUS atualizado
