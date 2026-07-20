@@ -680,3 +680,43 @@ Capítulo 05 encerrado — 5 Features (Toast System, Theme Switcher, Form Valida
 ### v0.6.0-pages
 
 Capítulo 06 encerrado — `DefaultLayout` + `Home` de referência, com spec própria (`18-page-specification.md`) deixando claro que Pages não é parte do framework.
+
+---
+
+# v0.7.0-release
+
+## Capítulo 07 — Release
+
+Primeiro release de verdade do projeto — todos os capítulos 00 a 06 concluídos (Auditoria, Foundation, Design System, Components, Layout, Features, Pages). **Não é a v1.0** — API pública ainda não está congelada; ver pendências abaixo.
+
+---
+
+### CH07-001
+
+#### Changed
+
+- `package.json`: `0.1.0` → `0.7.0`
+
+#### Fixed
+
+- `notes/bugs.md`: bug de customização do Bootstrap confirmado corrigido (já estava, desde a migração `@use`/`@forward`)
+
+#### Documentation
+
+- `docs/roadmap/00-roadmap.md`: remove a nota solta de "v1.0: migrar pra @use/@forward" no fim do arquivo (migração já concluída no Capítulo 03/04, adiantada em relação ao plano original) e registra as pendências reais que faltam pra v1.0
+- PROJECT_STATUS atualizado
+
+#### Pendências conhecidas para v1.0 (não resolvidas nesta release)
+
+- Acessibilidade dos Components/Layout: documentada, não validada com ferramenta/teste manual
+- Tokens de dark mode: não existem — `ThemeSwitcher` alterna `data-bs-theme`, mas `brand`/`neutral` não têm contraparte escura
+- Mecanismo de montagem de Page via Router: não existe
+- jQuery: dependência não usada em lugar nenhum do código, segue no `package.json`
+
+---
+
+## Release
+
+### v0.7.0-release
+
+Capítulo 07 encerrado. Tag `v0.7.0` marca o primeiro release de verdade do projeto em `master`.

@@ -123,15 +123,18 @@ Status
 
 Objetivo
 
-Congelar APIs públicas e preparar a versão 1.0.
+Congelar APIs públicas e preparar a próxima grande versão do framework.
 
+Escopo desta rodada: bump de versão (`package.json` → `0.7.0`) e tag `v0.7.0` em `master`, marcando o primeiro release de verdade do projeto (todos os capítulos 00–06 concluídos). Não é a versão 1.0 ainda — essa segue em aberto pra quando o framework estiver pronto pra congelar API de verdade (ver pendências abaixo).
 
+Status
 
+✅ Concluído
 
+## Pendências conhecidas para v1.0 (não resolvidas nesta release)
 
-v1.0
-
-Migrar todo o framework para
-
-@use
-@forward
+- Migração `@import` → `@use`/`@forward`: ✅ já concluída (Capítulo 03/04), adiantada em relação ao plano original
+- Acessibilidade dos Components/Layout: documentada, não validada com ferramenta/teste manual
+- Tokens de dark mode: não existem — `ThemeSwitcher` alterna `data-bs-theme`, mas variantes `brand`/`neutral` não têm contraparte escura
+- Mecanismo de montagem de Page via Router: não existe (`Home` é referência estática, não ligada a nenhuma rota)
+- jQuery: dependência não usada em lugar nenhum do código, segue no `package.json`

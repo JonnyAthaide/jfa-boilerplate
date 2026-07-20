@@ -181,3 +181,34 @@ Commits
 ✔ Documentação prévia — `18-page-specification.md`
 ✔ CH06-001 — DefaultLayout (`src/layouts/DefaultLayout`) — Header + Main + Footer, sticky footer
 ✔ CH06-002 — Home (`src/pages/Home`) — referência: DefaultLayout + Hero + Section + Card + Button
+
+---
+
+## Release Atual
+
+✅ v0.7.0-release
+
+Status
+
+Concluída
+
+---
+
+## Capítulo 07 — Release
+
+Status
+
+✅ Concluído
+
+Primeiro release de verdade do projeto — todos os capítulos 00–06 concluídos. Não é v1.0 ainda (ver Pendências abaixo).
+
+Commits
+
+✔ CH07-001 — `package.json` → `0.7.0`; `notes/bugs.md`/`00-roadmap.md`/`CHANGELOG.md` fechados
+
+## Pendências conhecidas para v1.0
+
+- Acessibilidade dos Components/Layout: documentada, não validada com ferramenta/teste manual
+- Tokens de dark mode: não existem — `ThemeSwitcher` alterna `data-bs-theme`, mas `brand`/`neutral` não têm contraparte escura
+- Mecanismo de montagem de Page via Router: não existe
+- jQuery: dependência não usada em lugar nenhum do código, segue no `package.json`
