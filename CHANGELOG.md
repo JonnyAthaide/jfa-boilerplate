@@ -762,3 +762,26 @@ Segunda pendência conhecida para v1.0 atacada (ver release v0.7.0).
 #### Documentation
 
 - Achado ao investigar onde jQuery era mencionado: `README.md` da raiz está bem desatualizado (tabela de releases parada em v0.3.0, link errado pro `PROJECT_STATUS.md`, tabela de hierarquia de documentação referenciando arquivos antigos de antes da reorganização pra `docs/architecture/`, "Known Issues" ainda citando o bug do `@import` já corrigido) — fora do escopo desta mudança, fica registrado como pendência a decidir
+
+---
+
+## Manutenção — Tokens de Dark Mode
+
+Quarta pendência conhecida para v1.0 (ver release v0.7.0).
+
+#### Added
+
+- `$color-text-dark`/`$color-text-muted-dark` (`_colors.scss`) — espelham a mesma fórmula do Bootstrap pros próprios `$body-color-dark`/`$body-secondary-color-dark`
+- `[data-bs-theme="dark"]` em Header, Footer, Sidebar e Hero (`src/layouts/`) — únicos Layouts que usavam cor de texto/borda fixa (Sass, não `var(--bs-*)`), então não reagiam ao tema
+- `[data-bs-theme="dark"]` em `.alert-brand`/`.alert-neutral` — troca `tint(80%)/shade(60%)` (clareado, assume fundo branco) por `shade(80%)/tint(40%)`, mesma fórmula que o Bootstrap usa pros próprios `*-bg-subtle-dark`/`*-text-emphasis-dark`
+
+#### Changed
+
+- `_variables.scss`: `$body-color-dark`/`$body-bg-dark`/`$border-color-dark` do Bootstrap passam a apontar pros tokens do JFA (`$color-text-dark`/`$color-surface-dark`/`$color-border-dark`) — os dois últimos já existiam desde o CH02-002 e nunca tinham sido usados
+- `theme-switcher/README.md`: nota de limitação reescrita — não é mais "brand/neutral sem contraparte escura" (impreciso), detalha exatamente o que foi coberto e o que ficou de fora por decisão
+
+#### Documentation
+
+- **De propósito fora do escopo**: `.btn-brand`/`.btn-neutral`/`.text-bg-brand`/`.text-bg-neutral` (Button/Badge) não ganharam tratamento escuro — usam fundo sólido e opaco, contraste interno não depende do tema da página, já confirmado correto na auditoria de acessibilidade
+- Contraste WCAG conferido nos novos valores de `.alert-brand`/`.alert-neutral` (dark) e no texto de Header (dark) — todos passam AA com boa margem
+- PROJECT_STATUS/roadmap atualizados

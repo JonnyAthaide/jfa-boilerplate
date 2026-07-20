@@ -35,3 +35,23 @@
         color: $color-text;
     }
 }
+
+[data-bs-theme="dark"] {
+
+    .header {
+        border-bottom-color: $color-border-dark;
+    }
+
+    .header__logo {
+        color: $color-text-dark;
+    }
+
+    .header__link {
+        color: $color-text-muted-dark;
+
+        &:hover {
+            color: $color-text-dark;
+        }
+    }
+
+}

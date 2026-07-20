@@ -209,7 +209,7 @@ Commits
 ## Pendências conhecidas para v1.0
 
 - ~~Acessibilidade dos Components/Layout: documentada, não validada~~ — 🟢 validada por análise estática (axe-core/jsdom) + cálculo exato de contraste WCAG para os tokens `brand`/`neutral`; todos os pares passam AA. Segue faltando: teste real de teclado/leitor de tela com navegador (indisponível neste ambiente) — ver `docs/audits/history.md`
-- Tokens de dark mode: não existem — `ThemeSwitcher` alterna `data-bs-theme`, mas `brand`/`neutral` não têm contraparte escura
+- ~~Tokens de dark mode: não existem~~ — ✅ Header/Footer/Sidebar/Hero + `.alert-brand`/`.alert-neutral` ganharam `[data-bs-theme="dark"]`; `.btn-brand`/`.text-bg-brand`/etc. ficam de propósito sem tratamento (fundo sólido, não depende do tema) — ver `theme-switcher/README.md`
 - Mecanismo de montagem de Page via Router: não existe
 - ~~jQuery: dependência não usada em lugar nenhum do código~~ — ✅ removida
 
@@ -222,3 +222,9 @@ Commits
 
 ✅ Remoção do jQuery
 Bundle JS caiu de 172.58 kB pra 84.26 kB (gzip: 57.12 kB → 25.58 kB); `README.md` desatualizado achado nesse processo, fica como pendência a decidir
+
+✅ README.md atualizado
+Releases, roadmap, hierarquia de documentação e Known Issues batendo com o estado real do projeto
+
+✅ Tokens de Dark Mode
+Header/Footer/Sidebar/Hero + Alert brand/neutral cobertos; Button/Badge brand/neutral de propósito fora (fundo sólido); `$color-surface-dark`/`$color-border-dark` (ociosos desde CH02-002) conectados
