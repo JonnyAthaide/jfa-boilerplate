@@ -622,3 +622,29 @@ Capítulo 04 encerrado — 7 peças de Layout (Header, Footer, Main, Section, He
 
 - `toast.js` monta o markup via `document.createElement`/`textContent`, não `innerHTML` — mesma lição aplicada na correção do `Breadcrumb` durante a auditoria do CH03, agora também escrita como anti-pattern na spec de Features
 - PROJECT_STATUS atualizado
+
+---
+
+### CH05-002 a CH05-005
+
+#### Added
+
+- Theme Switcher — `init()/toggle()/setTheme()/getTheme()`, alterna `data-bs-theme` e persiste via `Storage` do Foundation (não `localStorage` direto)
+- Form Validation — liga `form.checkValidity()` nativo ao `was-validated` do Bootstrap, sem definir nenhuma regra de validação própria
+- Infinite Scroll — `IntersectionObserver` num elemento sentinela, dispara um callback fornecido por quem consome (sem buscar/renderizar nada sozinha)
+- Lazy Loading — `IntersectionObserver` em imagens `data-src`, troca por `src` ao entrar na viewport
+
+Nenhuma das 4 precisou de `.scss` próprio (comportamento puro, sem CSS além do que Bootstrap/Components já cobrem) — a spec de Features já previa isso como opcional.
+
+#### Documentation
+
+- Theme Switcher documenta uma limitação real, não escondida: as variantes `brand`/`neutral` (Button/Badge/Alert) não têm contraparte em modo escuro ainda — só os componentes nativos do Bootstrap se adaptam
+- PROJECT_STATUS atualizado
+
+---
+
+## Release
+
+### v0.5.0-features
+
+Capítulo 05 encerrado — 5 Features (Toast System, Theme Switcher, Form Validation, Infinite Scroll, Lazy Loading), com spec própria (`17-feature-specification.md`) documentada antes da implementação.

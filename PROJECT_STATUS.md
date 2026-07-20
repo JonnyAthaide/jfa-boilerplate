@@ -131,21 +131,27 @@ Commits
 
 ---
 
-## Próxima Release
+## Release Atual
 
-🚧 v0.5.0-features
+✅ v0.5.0-features
 
 Status
 
-Release v0.5.0 — Features
+Concluída
+
+---
 
 ## Capítulo 05 — Features
 
 Status
 
-🟡 Em andamento
+✅ Concluído
 
 Commits
 
 ✔ Documentação prévia — `17-feature-specification.md`
 ✔ CH05-001 — Toast System (pathfinder) — `ToastSystem.show()` sobre `bootstrap.Toast`
+✔ CH05-002 — Theme Switcher — light/dark via `data-bs-theme` + `Storage` do Foundation
+✔ CH05-003 — Form Validation — liga validação nativa HTML5 ao feedback do Bootstrap
+✔ CH05-004 — Infinite Scroll — `IntersectionObserver`, callback fornecido por quem consome
+✔ CH05-005 — Lazy Loading — `IntersectionObserver`, troca `data-src` por `src`

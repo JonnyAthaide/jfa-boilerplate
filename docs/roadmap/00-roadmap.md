@@ -99,6 +99,10 @@ Objetivo
 
 Definir como funcionalidades serão organizadas, orquestrando Components e Layouts.
 
+Status
+
+✅ Concluído
+
 ---
 
 # Capítulo 06 — Pages
