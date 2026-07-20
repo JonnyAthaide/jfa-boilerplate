@@ -79,23 +79,37 @@ Status
 
 ---
 
-# Capítulo 04 — Features
+# Capítulo 04 — Layout
 
 Objetivo
 
-Definir como funcionalidades serão organizadas.
+Construir as estruturas reutilizáveis de composição da interface (Header, Footer, Sidebar, Navbar, Hero, Main, Section), organizando os Components sem conter regra de negócio.
+
+> Inserido antes de Features (2026-07-20): a Constituição (`00-architecture-principles.md`, Artigo 2) define a hierarquia `Foundation → Design System → Layout → Components → Features`, e `06-features.md` lista Layout como dependência de Features. O roadmap original colocava Layout depois de Features (junto de Pages) — corrigido para não violar a própria hierarquia declarada.
+
+Status
+
+⬜ Não iniciado
 
 ---
 
-# Capítulo 05 — Pages e Layouts
+# Capítulo 05 — Features
 
 Objetivo
 
-Separar navegação de composição visual.
+Definir como funcionalidades serão organizadas, orquestrando Components e Layouts.
 
 ---
 
-# Capítulo 06 — Release
+# Capítulo 06 — Pages
+
+Objetivo
+
+Compor Layouts, Components e Features em páginas completas do projeto consumidor.
+
+---
+
+# Capítulo 07 — Release
 
 Objetivo
 
