@@ -16,7 +16,6 @@ portais e aplicações administrativas.
 - Vite
 - Bootstrap
 - Sass
-- jQuery
 - PostCSS
 - Bootstrap Icons
 

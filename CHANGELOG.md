@@ -739,3 +739,26 @@ Ataca a primeira pendência conhecida para v1.0 (ver release v0.7.0 acima).
 - `card/README.md` já orientava corretamente o nível de heading (não precisou de mudança); `modal/README.md` ganhou uma nota explicando por que `aria-hidden-focus` aparece em análise estática mas não é problema real em runtime
 - Nenhuma interação de clique-só-em-`<div>` encontrada em Components/Layout/Features — operabilidade por teclado depende só de elementos nativos, sem gap
 - PROJECT_STATUS/roadmap atualizados: pendência de acessibilidade sai de "não validada" para "validada por análise estática + cálculo de contraste — teste real de teclado/leitor de tela segue pendente"
+
+---
+
+## Manutenção — Remoção do jQuery
+
+Segunda pendência conhecida para v1.0 atacada (ver release v0.7.0).
+
+#### Removed
+
+- Dependência `jquery` do `package.json` — não era usada em lugar nenhum do código (confirmado via busca antes de remover), Bootstrap 5 não depende dela
+- `window.$`/`window.jQuery` (`src/foundation/index.js`) e o registro `this.plugins.register("jquery", window.jQuery)` (`src/foundation/app/App.js`)
+
+#### Changed
+
+- `README.md`: jQuery sai da lista de Stack
+
+#### Fixed
+
+- Bundle JS: **172.58 kB → 84.26 kB** (gzip 57.12 kB → 25.58 kB) — jQuery era quase metade do peso do bundle final
+
+#### Documentation
+
+- Achado ao investigar onde jQuery era mencionado: `README.md` da raiz está bem desatualizado (tabela de releases parada em v0.3.0, link errado pro `PROJECT_STATUS.md`, tabela de hierarquia de documentação referenciando arquivos antigos de antes da reorganização pra `docs/architecture/`, "Known Issues" ainda citando o bug do `@import` já corrigido) — fora do escopo desta mudança, fica registrado como pendência a decidir

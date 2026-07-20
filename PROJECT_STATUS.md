@@ -211,7 +211,7 @@ Commits
 - ~~Acessibilidade dos Components/Layout: documentada, não validada~~ — 🟢 validada por análise estática (axe-core/jsdom) + cálculo exato de contraste WCAG para os tokens `brand`/`neutral`; todos os pares passam AA. Segue faltando: teste real de teclado/leitor de tela com navegador (indisponível neste ambiente) — ver `docs/audits/history.md`
 - Tokens de dark mode: não existem — `ThemeSwitcher` alterna `data-bs-theme`, mas `brand`/`neutral` não têm contraparte escura
 - Mecanismo de montagem de Page via Router: não existe
-- jQuery: dependência não usada em lugar nenhum do código, segue no `package.json`
+- ~~jQuery: dependência não usada em lugar nenhum do código~~ — ✅ removida
 
 ---
 
@@ -219,3 +219,6 @@ Commits
 
 ✅ Auditoria de Acessibilidade
 `docs/audits/history.md` ganhou seção própria (metodologia, achados, pendências reais); corrigido `landmark-unique` duplicado no sandbox; `.gitignore` ganhou `.vite`
+
+✅ Remoção do jQuery
+Bundle JS caiu de 172.58 kB pra 84.26 kB (gzip: 57.12 kB → 25.58 kB); `README.md` desatualizado achado nesse processo, fica como pendência a decidir

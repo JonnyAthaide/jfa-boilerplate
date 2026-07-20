@@ -46,8 +46,6 @@ export class App {
 
         });
 
-        this.plugins.register("jquery", window.jQuery);
-
         await this.lifecycle.start();
 
         this.events.emit("app:init");
