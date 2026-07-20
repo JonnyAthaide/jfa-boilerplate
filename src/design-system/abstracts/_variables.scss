@@ -118,3 +118,33 @@ $warning: $color-warning;
 $info: $color-info;
 // $light: $color-light;
 // $dark: $color-dark;
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Badge
+|--------------------------------------------------------------------------
+*/
+
+$badge-border-radius: $radius-badge;
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Card
+|--------------------------------------------------------------------------
+*/
+
+$card-border-radius: $radius-card;
+$card-box-shadow: $shadow-card;
+
+
+/*
+|--------------------------------------------------------------------------
+| Bootstrap Modal
+|--------------------------------------------------------------------------
+*/
+
+$modal-content-border-radius: $radius-modal;
+$modal-content-box-shadow-sm-up: $shadow-modal;
+$modal-transition: transform $transition-modal ease-out;

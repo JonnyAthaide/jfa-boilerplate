@@ -84,3 +84,18 @@ Auditoria da implementação
 
 ✅ CH03-001
 Button — primeiro componente (HTML, SCSS, JS, README)
+
+✅ CH03-002
+Badge — variantes text-bg-* + brand/neutral (HTML, SCSS, JS, README)
+
+✅ CH03-003
+Card — header/body/footer + card-hover (HTML, SCSS, JS, README)
+
+✅ CH03-004
+Alert — dismissible + brand/neutral (HTML, SCSS, JS, README)
+
+✅ CH03-005
+Breadcrumb — setItems() dinâmico (HTML, SCSS, JS, README)
+
+✅ CH03-006
+Modal — open/close/toggle sobre bootstrap.Modal (HTML, SCSS, JS, README)

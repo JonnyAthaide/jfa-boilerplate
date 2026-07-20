@@ -1,0 +1,7 @@
+.card-hover {
+    transition: $transition-card;
+
+    &:hover {
+        box-shadow: $shadow-lg;
+    }
+}

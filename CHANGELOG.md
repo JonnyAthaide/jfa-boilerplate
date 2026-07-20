@@ -385,3 +385,113 @@
 
 - PROJECT_STATUS atualizado
 - Bug de ordem de import do Bootstrap (customização de cor/fonte não aplicada) registrado em `notes/bugs.md`, pendente para o fim do capítulo
+
+---
+
+### CH03-002
+
+#### Added
+
+- Badge component (HTML, SCSS, JS, README)
+- `.text-bg-brand` / `.text-bg-neutral`, reaproveitando os tokens `$color-brand`/`$color-neutral` do Button
+
+#### Changed
+
+- `$badge-border-radius` conectado ao token `$radius-badge` (existia desde o CH02-005 e nunca tinha sido usado)
+- Barrel exports de `components` e `components/badge` passam a exportar a classe `Badge`
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
+
+### CH03-003
+
+#### Added
+
+- Card component (HTML, SCSS, JS, README)
+- Modificador `.card-hover`, conectando o token `$transition-card` (existia desde o CH02-008 e nunca tinha sido usado)
+
+#### Changed
+
+- `$card-border-radius`/`$card-box-shadow` conectados aos tokens `$radius-card`/`$shadow-card`
+- Barrel exports de `components` e `components/card` passam a exportar a classe `Card`
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
+
+### CH03-004
+
+#### Added
+
+- Alert component (HTML, SCSS, JS, README)
+- `.alert-brand` / `.alert-neutral`, calculados com `tint-color()`/`shade-color()` do Bootstrap (mesma fórmula usada internamente para gerar `alert-{color}-bg-subtle`/`border-subtle`/`text-emphasis`)
+
+#### Changed
+
+- Barrel exports de `components` e `components/alert` passam a exportar a classe `Alert`, que envolve a instância nativa `bootstrap.Alert` (dismiss via `data-bs-dismiss="alert"` já funciona nativamente, sem JS próprio)
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
+
+### CH03-005
+
+#### Added
+
+- Breadcrumb component (HTML, SCSS, JS, README)
+- `Breadcrumb.setItems()` para montagem dinâmica da trilha de navegação
+
+#### Changed
+
+- Barrel exports de `components` e `components/breadcrumb` passam a exportar a classe `Breadcrumb`
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+- Sem customização de cor: Breadcrumb não tem variantes no Bootstrap, `breadcrumb.scss` documenta isso em vez de inventar uma
+
+---
+
+### CH03-006
+
+#### Added
+
+- Modal component (HTML, SCSS, JS, README)
+
+#### Changed
+
+- `$modal-content-border-radius`/`$modal-content-box-shadow-sm-up`/`$modal-transition` conectados aos tokens `$radius-modal`/`$shadow-modal`/`$transition-modal` (existiam desde o Capítulo 02 e nunca tinham sido usados)
+- Barrel exports de `components` e `components/modal` passam a exportar a classe `Modal`, que envolve a instância nativa `bootstrap.Modal` (foco, backdrop, ESC e scroll lock nativos — nenhuma reimplementação própria)
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
+
+## Release
+
+### v0.3.0-components
+
+#### Added
+
+- 6 componentes: Button, Badge, Card, Alert, Breadcrumb, Modal (HTML, SCSS, JS, README cada)
+- Tokens conectados que estavam ociosos desde o Capítulo 02: `$radius-badge`, `$shadow-card`/`$transition-card`, `$radius-modal`/`$shadow-modal`/`$transition-modal`
+- Tokens novos: `$color-brand`, `$color-neutral`
+
+#### Changed
+
+- Barrel exports (`components/index.js` e de cada componente) passam a exportar as classes de verdade, em vez de imports de efeito colateral
+- `src/components/_index.scss` padronizado em `@import`, consistente com o resto do projeto
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+- Bug de ordem de import do Bootstrap (customização de cor/fonte não aplicada) registrado em `notes/bugs.md`, segue pendente — ainda não corrigido
