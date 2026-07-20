@@ -9,7 +9,369 @@
 
 <body>
 
-  <div id="app"></div>
+  <div id="app">
+
+    <header class="sandbox-header">
+      <h1>JFA Framework</h1>
+      <p>Sandbox • v0.4.0 – Layout</p>
+    </header>
+
+    <main class="sandbox">
+
+      <section class="sandbox-section">
+
+        <h2>Button</h2>
+
+        <button class="btn">
+          Default
+        </button>
+
+        <button class="btn btn-primary">primary</button>
+        <button class="btn btn-secondary">secondary</button>
+        <button class="btn btn-success">success</button>
+        <button class="btn btn-danger">danger</button>
+        <button class="btn btn-warning">warning</button>
+        <button class="btn btn-info">info</button>
+        <button class="btn btn-light">light</button>
+        <button class="btn btn-dark">dark</button>
+        <button class="btn btn-link">link</button>
+
+        <button class="btn btn-primary is-loading">is loading</button>
+
+        <button class="btn btn-brand">Brand</button>
+        <button class="btn btn-neutral">Neutral</button>
+
+        <button class="btn btn-primary">
+
+          <span class="btn__icon">
+            <i class="bi bi-download"></i>
+          </span>
+
+          <span class="btn__label">
+            Salvar
+          </span>
+
+        </button>
+
+        <button class="btn btn-primary">
+          <span class="btn__label">
+            Próximo
+          </span>
+
+          <span class="btn__icon">
+            <i class="bi bi-arrow-right"></i>
+          </span>
+        </button>
+
+        <button class="btn btn-primary is-loading">
+
+          <span class="btn__spinner"></span>
+
+          <span class="btn__label">
+            Salvando...
+          </span>
+
+        </button>
+
+        <div class="jf-command-palette">command-palette</div>
+        <div class="jf-empty-state">empty-state</div>
+        <div class="jf-page-loader">page-loader</div>
+        <div class="jf-skeleton">skeleton</div>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Badge</h2>
+
+        <span class="badge text-bg-primary">primary</span>
+        <span class="badge text-bg-secondary">secondary</span>
+        <span class="badge text-bg-success">success</span>
+        <span class="badge text-bg-danger">danger</span>
+        <span class="badge text-bg-warning">warning</span>
+        <span class="badge text-bg-info">info</span>
+        <span class="badge text-bg-light">light</span>
+        <span class="badge text-bg-dark">dark</span>
+
+        <span class="badge text-bg-brand">Brand</span>
+        <span class="badge text-bg-neutral">Neutral</span>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Card</h2>
+
+        <div class="card" style="max-width: 20rem;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Card text</p>
+          </div>
+        </div>
+
+        <div class="card" style="max-width: 20rem;">
+          <div class="card-header">Header</div>
+          <div class="card-body">
+            <h5 class="card-title">Com header e footer</h5>
+            <p class="card-text">Card text</p>
+          </div>
+          <div class="card-footer">Footer</div>
+        </div>
+
+        <div class="card card-hover" style="max-width: 20rem;">
+          <div class="card-body">
+            <h5 class="card-title">Card hover</h5>
+            <p class="card-text">Passe o mouse para ver a sombra</p>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Alert</h2>
+
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          Primary alert
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="alert alert-success" role="alert">
+          Success alert (sem dismiss)
+        </div>
+
+        <div class="alert alert-brand alert-dismissible fade show" role="alert">
+          Brand alert
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="alert alert-neutral" role="alert">
+          Neutral alert
+        </div>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Breadcrumb</h2>
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+          </ol>
+        </nav>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Modal</h2>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sandboxModal">
+          Abrir modal
+        </button>
+
+        <div class="modal fade" id="sandboxModal" tabindex="-1" aria-labelledby="sandboxModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h5 class="modal-title" id="sandboxModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-body">
+                Modal body text
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Layout — Header</h2>
+
+        <header class="header">
+
+          <div class="header__brand">
+            <a href="/" class="header__logo">JFA</a>
+          </div>
+
+          <nav class="header__nav" aria-label="Principal">
+            <a href="#" class="header__link">Home</a>
+          </nav>
+
+        </header>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Layout — Navbar</h2>
+
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+
+            <a class="navbar-brand" href="/">JFA</a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#sandboxNavbarNav"
+              aria-controls="sandboxNavbarNav"
+              aria-expanded="false"
+              aria-label="Abrir navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="sandboxNavbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sobre</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Layout — Hero</h2>
+
+        <section class="hero">
+          <h1 class="hero__title">Título de destaque</h1>
+          <p class="hero__text">Texto de apoio do hero.</p>
+        </section>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Layout — Sidebar</h2>
+
+        <aside class="sidebar">
+          <nav class="sidebar__nav" aria-label="Secundária">
+            <a href="#" class="sidebar__link">Item 1</a>
+            <a href="#" class="sidebar__link">Item 2</a>
+          </nav>
+        </aside>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Layout — Main / Section</h2>
+
+        <p><em>Demo visual apenas — o sandbox já tem seu próprio &lt;main&gt;, então aqui usamos uma &lt;div&gt; só pra mostrar o estilo. O componente real usa &lt;main&gt; (ver <code>layouts/main/main.html</code>).</em></p>
+
+        <div class="main">
+          <section class="section">
+            <p>Conteúdo principal dentro de uma seção.</p>
+          </section>
+        </div>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Layout — Footer</h2>
+
+        <footer class="footer">
+          <p class="footer__text">© 2026 JFA</p>
+        </footer>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Feature — Toast System</h2>
+
+        <p><em>Demo visual apenas (mesmo padrão dos demos anteriores) — pra ver o `ToastSystem.show()` em ação é preciso instanciar numa Page/App real.</em></p>
+
+        <div class="toast-container position-static">
+
+          <div class="toast align-items-center text-bg-success border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+              <div class="toast-body">Salvo com sucesso!</div>
+              <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+          </div>
+
+          <div class="toast align-items-center text-bg-brand border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+              <div class="toast-body">Toast com a variante brand</div>
+              <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Pages — Home (referência/demo)</h2>
+
+        <p><em>Demo visual apenas — o &lt;main&gt; real do DefaultLayout não pode ser aninhado no &lt;main&gt; do sandbox, então aqui é uma &lt;div&gt;. Ver <code>src/pages/Home/Home.html</code> pro HTML real.</em></p>
+
+        <div class="default-layout" style="min-height: auto;">
+
+          <header class="header">
+            <div class="header__brand">
+              <a href="/" class="header__logo">JFA</a>
+            </div>
+            <nav class="header__nav" aria-label="Principal">
+              <a href="#" class="header__link">Home</a>
+            </nav>
+          </header>
+
+          <div class="main">
+
+            <section class="hero">
+              <h1 class="hero__title">Bem-vindo ao JFA</h1>
+              <p class="hero__text">Boilerplate front-end modular, com Design System, Components, Layout e Features prontos.</p>
+              <button class="btn btn-primary">Começar</button>
+            </section>
+
+            <section class="section">
+              <div class="card" style="max-width: 20rem; margin: 0 auto;">
+                <div class="card-body">
+                  <h5 class="card-title">Exemplo de conteúdo</h5>
+                  <p class="card-text">Este Card veio direto de src/components/card, sem nada novo criado aqui.</p>
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+          <footer class="footer">
+            <p class="footer__text">© 2026 JFA</p>
+          </footer>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
 
   <script type="module" src="/src/main.js"></script>
 

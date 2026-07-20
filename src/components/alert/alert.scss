@@ -1,0 +1,15 @@
+@use "../../design-system/abstracts" as *;
+
+.alert-brand {
+    --#{$prefix}alert-color: #{shade-color($color-brand, 60%)};
+    --#{$prefix}alert-bg: #{tint-color($color-brand, 80%)};
+    --#{$prefix}alert-border-color: #{tint-color($color-brand, 60%)};
+    --#{$prefix}alert-link-color: #{shade-color($color-brand, 60%)};
+}
+
+.alert-neutral {
+    --#{$prefix}alert-color: #{shade-color($color-neutral, 60%)};
+    --#{$prefix}alert-bg: #{tint-color($color-neutral, 80%)};
+    --#{$prefix}alert-border-color: #{tint-color($color-neutral, 60%)};
+    --#{$prefix}alert-link-color: #{shade-color($color-neutral, 60%)};
+}

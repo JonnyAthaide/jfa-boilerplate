@@ -1,0 +1,4 @@
+// Radius, sombra e transição do Modal são resolvidos via $modal-content-border-radius /
+// $modal-content-box-shadow-sm-up / $modal-transition em _variables.scss (tokens
+// $radius-modal / $shadow-modal / $transition-modal). Sem variantes de cor: modal não
+// tem tema por contexto no Bootstrap, então nada para sobrepor aqui.

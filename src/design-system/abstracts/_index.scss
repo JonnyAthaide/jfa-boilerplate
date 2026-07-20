@@ -1,12 +1,12 @@
-@import "colors";
-@import "spacing";
-@import "typography";
-@import "radius";
-@import "shadow";
-@import "breakpoints";
-@import "motion";
-@import "z-index";
+@forward "colors";
+@forward "spacing";
+@forward "typography";
+@forward "radius";
+@forward "shadow";
+@forward "breakpoints";
+@forward "motion";
+@forward "z-index";
 
-@import "functions";
-@import "mixins";
-@import "variables";
+@forward "functions";
+@forward "mixins";
+@forward "variables";
