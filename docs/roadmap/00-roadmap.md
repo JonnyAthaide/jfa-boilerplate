@@ -42,7 +42,7 @@ Entregas
 
 Status
 
-🟡 Em andamento
+✅ Concluído
 
 ---
 
@@ -58,11 +58,28 @@ Entregas
 - Cores
 - Tipografia
 - Espaçamentos
-- Componentes
+
+Status
+
+✅ Concluído
+
+> "Componentes" saiu das entregas deste capítulo: o estilo/comportamento de cada componente passou a viver dentro do próprio componente (`src/components/<nome>/`), não centralizado no Design System. Ver Capítulo 03.
 
 ---
 
-# Capítulo 03 — Features
+# Capítulo 03 — Components
+
+Objetivo
+
+Construir os componentes reutilizáveis de interface (HTML, SCSS, JS e README próprios cada um), consumindo os tokens do Design System.
+
+Status
+
+🟡 Em andamento (Auditoria da implementação ainda pendente — ver PROJECT_STATUS.md)
+
+---
+
+# Capítulo 04 — Features
 
 Objetivo
 
@@ -70,7 +87,7 @@ Definir como funcionalidades serão organizadas.
 
 ---
 
-# Capítulo 04 — Pages e Layouts
+# Capítulo 05 — Pages e Layouts
 
 Objetivo
 
@@ -78,7 +95,7 @@ Separar navegação de composição visual.
 
 ---
 
-# Capítulo 05 — Release
+# Capítulo 06 — Release
 
 Objetivo
 
