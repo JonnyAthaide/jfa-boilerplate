@@ -720,3 +720,22 @@ Primeiro release de verdade do projeto — todos os capítulos 00 a 06 concluíd
 ### v0.7.0-release
 
 Capítulo 07 encerrado. Tag `v0.7.0` marca o primeiro release de verdade do projeto em `master`.
+
+---
+
+## Manutenção — Auditoria de Acessibilidade
+
+Ataca a primeira pendência conhecida para v1.0 (ver release v0.7.0 acima).
+
+#### Fixed
+
+- `index.html` (sandbox): dois `<nav aria-label="Principal">` na mesma página (demo do Header sozinho + dentro da composição Home) — leitor de tela não distinguia. Segundo vira `aria-label="Principal (Home)"`
+- `.gitignore`: faltava `.vite` (cache do Vite, achado como pasta não rastreada durante o trabalho)
+
+#### Documentation
+
+- `docs/audits/history.md`: nova seção "Acessibilidade (Capítulo 07)" — metodologia (axe-core + jsdom pra ARIA/landmarks/headings, cálculo exato de contraste WCAG pros tokens `brand`/`neutral`, revisão manual de operabilidade por teclado), achados corrigidos, e o que segue genuinely não verificado (teste real de teclado/leitor de tela precisa de navegador, indisponível neste ambiente)
+- Todos os pares de cor `brand`/`neutral` (Button/Badge/Alert) confirmados dentro do WCAG AA (4.5:1) — nenhum ajuste de cor foi necessário
+- `card/README.md` já orientava corretamente o nível de heading (não precisou de mudança); `modal/README.md` ganhou uma nota explicando por que `aria-hidden-focus` aparece em análise estática mas não é problema real em runtime
+- Nenhuma interação de clique-só-em-`<div>` encontrada em Components/Layout/Features — operabilidade por teclado depende só de elementos nativos, sem gap
+- PROJECT_STATUS/roadmap atualizados: pendência de acessibilidade sai de "não validada" para "validada por análise estática + cálculo de contraste — teste real de teclado/leitor de tela segue pendente"

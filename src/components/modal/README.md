@@ -51,3 +51,5 @@ Sem variantes de cor — modal não tem tema por contexto no Bootstrap.
 `aria-labelledby` no `.modal` apontando para o `id` do `.modal-title`.
 
 Foco preso dentro do modal e devolvido ao elemento que abriu, fechamento via ESC e clique no backdrop — comportamento nativo do `bootstrap.Modal`.
+
+Nota de auditoria: o markup estático (`modal.html`) tem `aria-hidden="true"` mesmo contendo botões focáveis dentro — ferramentas de análise estática (ex.: axe-core) acusam isso (`aria-hidden-focus`), mas em runtime não é um problema real: o `bootstrap.Modal` remove o `aria-hidden` no momento em que o modal abre, exatamente quando os botões passam a ser alcançáveis. É assim que o próprio Bootstrap documenta o padrão.

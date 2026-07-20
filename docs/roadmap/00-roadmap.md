@@ -134,7 +134,7 @@ Status
 ## Pendências conhecidas para v1.0 (não resolvidas nesta release)
 
 - Migração `@import` → `@use`/`@forward`: ✅ já concluída (Capítulo 03/04), adiantada em relação ao plano original
-- Acessibilidade dos Components/Layout: documentada, não validada com ferramenta/teste manual
+- ~~Acessibilidade dos Components/Layout: documentada, não validada~~ — 🟢 validada por análise estática (axe-core/jsdom) + cálculo exato de contraste WCAG; falta só teste real de teclado/leitor de tela com navegador (ver `docs/audits/history.md`)
 - Tokens de dark mode: não existem — `ThemeSwitcher` alterna `data-bs-theme`, mas variantes `brand`/`neutral` não têm contraparte escura
 - Mecanismo de montagem de Page via Router: não existe (`Home` é referência estática, não ligada a nenhuma rota)
 - jQuery: dependência não usada em lugar nenhum do código, segue no `package.json`

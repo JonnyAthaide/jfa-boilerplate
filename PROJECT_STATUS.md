@@ -208,7 +208,14 @@ Commits
 
 ## Pendências conhecidas para v1.0
 
-- Acessibilidade dos Components/Layout: documentada, não validada com ferramenta/teste manual
+- ~~Acessibilidade dos Components/Layout: documentada, não validada~~ — 🟢 validada por análise estática (axe-core/jsdom) + cálculo exato de contraste WCAG para os tokens `brand`/`neutral`; todos os pares passam AA. Segue faltando: teste real de teclado/leitor de tela com navegador (indisponível neste ambiente) — ver `docs/audits/history.md`
 - Tokens de dark mode: não existem — `ThemeSwitcher` alterna `data-bs-theme`, mas `brand`/`neutral` não têm contraparte escura
 - Mecanismo de montagem de Page via Router: não existe
 - jQuery: dependência não usada em lugar nenhum do código, segue no `package.json`
+
+---
+
+## Manutenção
+
+✅ Auditoria de Acessibilidade
+`docs/audits/history.md` ganhou seção própria (metodologia, achados, pendências reais); corrigido `landmark-unique` duplicado no sandbox; `.gitignore` ganhou `.vite`
