@@ -648,3 +648,35 @@ Nenhuma das 4 precisou de `.scss` próprio (comportamento puro, sem CSS além do
 ### v0.5.0-features
 
 Capítulo 05 encerrado — 5 Features (Toast System, Theme Switcher, Form Validation, Infinite Scroll, Lazy Loading), com spec própria (`17-feature-specification.md`) documentada antes da implementação.
+
+---
+
+# v0.6.0-pages
+
+## Capítulo 06 — Pages
+
+> `docs/architecture/12-pages.md` e a Constituição são explícitos: Pages pertence ao projeto consumidor (Hashi Sushi), não ao framework. Este capítulo entrega só referência/demo neste repositório — não o site real.
+
+---
+
+### CH06-001 e CH06-002
+
+#### Added
+
+- `docs/architecture/18-page-specification.md`: contrato de referência para Pages e para templates de Layout completos (`DefaultLayout`/`AdminLayout`), deixando explícito que não são parte reutilizável do framework
+- `DefaultLayout` (`src/layouts/DefaultLayout`) — compõe Header + Main + Footer num shell de página (sticky footer via flexbox); nomenclatura PascalCase, diferente das peças granulares (kebab-case), conforme já registrado em `14-folder-structure.md`
+- `Home` (`src/pages/Home`) — página de referência: `DefaultLayout` + `Hero` + `Section` + `Card` + `Button`, nada criado especificamente para ela, só composição do que já existe
+
+#### Documentation
+
+- Lacuna conhecida, não escondida: não existe hoje nenhum mecanismo em `Router`/`App` (Foundation) que monte uma Page a partir de uma rota — `Home` fica como artefato de referência (HTML composto), no mesmo espírito dos `.html` de referência de Components/Layout, nenhum dos quais é injetado automaticamente em lugar nenhum hoje
+- `AdminLayout` não foi construído — sem um segundo caso de uso real que o justifique ainda
+- PROJECT_STATUS atualizado
+
+---
+
+## Release
+
+### v0.6.0-pages
+
+Capítulo 06 encerrado — `DefaultLayout` + `Home` de referência, com spec própria (`18-page-specification.md`) deixando claro que Pages não é parte do framework.

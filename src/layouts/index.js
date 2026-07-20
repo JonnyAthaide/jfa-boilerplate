@@ -5,3 +5,4 @@ export * from "./section";
 export * from "./hero";
 export * from "./sidebar";
 export * from "./navbar";
+export * from "./DefaultLayout";

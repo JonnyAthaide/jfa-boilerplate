@@ -155,3 +155,29 @@ Commits
 ✔ CH05-003 — Form Validation — liga validação nativa HTML5 ao feedback do Bootstrap
 ✔ CH05-004 — Infinite Scroll — `IntersectionObserver`, callback fornecido por quem consome
 ✔ CH05-005 — Lazy Loading — `IntersectionObserver`, troca `data-src` por `src`
+
+---
+
+## Release Atual
+
+✅ v0.6.0-pages
+
+Status
+
+Concluída
+
+---
+
+## Capítulo 06 — Pages
+
+Status
+
+✅ Concluído
+
+> Pages não fazem parte do framework — referência/demo, não o site real do Hashi Sushi (`18-page-specification.md`).
+
+Commits
+
+✔ Documentação prévia — `18-page-specification.md`
+✔ CH06-001 — DefaultLayout (`src/layouts/DefaultLayout`) — Header + Main + Footer, sticky footer
+✔ CH06-002 — Home (`src/pages/Home`) — referência: DefaultLayout + Hero + Section + Card + Button

@@ -111,6 +111,12 @@ Objetivo
 
 Compor Layouts, Components e Features em páginas completas do projeto consumidor.
 
+> Pages não fazem parte do framework (`12-pages.md`) — o que existe em `src/pages/` neste repositório é referência/demo, não o site real do projeto consumidor (Hashi Sushi). Ver `18-page-specification.md`.
+
+Status
+
+✅ Concluído
+
 ---
 
 # Capítulo 07 — Release
