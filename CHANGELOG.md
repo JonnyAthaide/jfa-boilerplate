@@ -572,3 +572,30 @@ Capítulo 03 encerrado — 6 componentes (Button, Badge, Card, Alert, Breadcrumb
 #### Documentation
 
 - PROJECT_STATUS atualizado
+
+---
+
+### CH04-002 a CH04-007
+
+#### Added
+
+- Footer, Main, Section, Hero, Sidebar, Navbar — as 6 peças restantes do Capítulo 04, mesmo formato do Header (HTML, SCSS, JS, README)
+- Navbar: `open()`/`close()`/`toggle()` sobre `bootstrap.Collapse` (toggle mobile nativo via `data-bs-toggle="collapse"`, sem reimplementação própria)
+- Tokens de layout conectados que estavam ociosos desde o CH02-004: `$container-padding` (Main), `$section-spacing` (Section), `$component-spacing` (Header — trocado de `$space-4` direto, mesmo valor, mais semântico), `$stack-spacing` (Sidebar)
+
+#### Changed
+
+- Hero migra o `.hero { max-width:720px; margin:auto; }` que estava órfão em `src/design-system/pages/_home.scss` — 720px vira o token `$container-md` (match exato, já existia). `pages/_home.scss` e a pasta `design-system/pages/` foram removidos por ficarem vazios; a referência em `main.scss` também saiu
+- Removida uma pasta `src/design-system/bootstrap/` vazia e sem referência em lugar nenhum (achada durante o trabalho, não relacionada a nenhum código ativo)
+
+#### Documentation
+
+- PROJECT_STATUS atualizado
+
+---
+
+## Release
+
+### v0.4.0-layout
+
+Capítulo 04 encerrado — 7 peças de Layout (Header, Footer, Main, Section, Hero, Sidebar, Navbar), com spec própria (`16-layout-specification.md`) documentada antes da implementação.

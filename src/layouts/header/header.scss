@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: $space-4;
+    gap: $component-spacing;
     padding: $space-4 $space-6;
     border-bottom: 1px solid $color-border;
 }
@@ -24,7 +24,7 @@
 .header__nav {
     display: flex;
     align-items: center;
-    gap: $space-4;
+    gap: $component-spacing;
 }
 
 .header__link {

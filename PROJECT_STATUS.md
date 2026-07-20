@@ -102,21 +102,29 @@ Todo o Design System + `src/components` migrados de `@import` para `@use`/`@forw
 
 ---
 
-## Próxima Release
+## Release Atual
 
-🚧 v0.4.0-layout
+✅ v0.4.0-layout
 
 Status
 
-Release v0.4.0 — Layout
+Concluída
+
+---
 
 ## Capítulo 04 — Layout
 
 Status
 
-🟡 Em andamento
+✅ Concluído
 
 Commits
 
 ✔ Documentação prévia — `16-layout-specification.md` + esclarecimentos em `14-folder-structure.md`/`00-roadmap.md`
 ✔ CH04-001 — Header (HTML, SCSS, JS, README)
+✔ CH04-002 — Footer
+✔ CH04-003 — Main
+✔ CH04-004 — Section
+✔ CH04-005 — Hero (migra o `.hero` órfão de `design-system/pages/_home.scss`, removido)
+✔ CH04-006 — Sidebar
+✔ CH04-007 — Navbar — open/close/toggle sobre `bootstrap.Collapse`

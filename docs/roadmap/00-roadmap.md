@@ -89,7 +89,7 @@ Construir as estruturas reutilizáveis de composição da interface (Header, Foo
 
 Status
 
-⬜ Não iniciado
+✅ Concluído
 
 ---
 

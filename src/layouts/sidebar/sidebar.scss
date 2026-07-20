@@ -1,0 +1,22 @@
+@use "../../design-system/abstracts" as *;
+
+.sidebar {
+    width: 240px;
+    padding: $component-spacing;
+    border-right: 1px solid $color-border;
+}
+
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: $stack-spacing;
+}
+
+.sidebar__link {
+    color: $color-text-muted;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-text;
+    }
+}
