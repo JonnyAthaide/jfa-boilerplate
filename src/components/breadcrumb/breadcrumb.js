@@ -8,19 +8,37 @@ class Breadcrumb {
 
     setItems(items){
 
-        this.element.innerHTML = items.map((item, index) => {
+        this.element.innerHTML = "";
+
+        items.forEach((item, index) => {
 
             const isLast = index === items.length - 1;
 
+            const li = document.createElement("li");
+
+            li.className = isLast ? "breadcrumb-item active" : "breadcrumb-item";
+
             if(isLast){
 
-                return `<li class="breadcrumb-item active" aria-current="page">${item.label}</li>`;
+                li.textContent = item.label;
+
+                li.setAttribute("aria-current", "page");
+
+            } else {
+
+                const link = document.createElement("a");
+
+                link.href = item.href;
+
+                link.textContent = item.label;
+
+                li.appendChild(link);
 
             }
 
-            return `<li class="breadcrumb-item"><a href="${item.href}">${item.label}</a></li>`;
+            this.element.appendChild(li);
 
-        }).join("");
+        });
 
     }
 

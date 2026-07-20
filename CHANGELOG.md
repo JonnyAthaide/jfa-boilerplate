@@ -515,3 +515,26 @@
 
 - `notes/bugs.md` atualizado — bug marcado como corrigido
 - PROJECT_STATUS atualizado
+
+---
+
+### Commit 03 — Auditoria da implementação
+
+#### Fixed
+
+- `Breadcrumb.setItems()` montava HTML via interpolação de string direto em `innerHTML`, sem escapar `item.label`/`item.href` — vetor de XSS se a trilha vier de dado não confiável (rota/query string). Passou a montar os nós via `document.createElement`/`textContent`.
+
+#### Documentation
+
+- `docs/audits/history.md`: nova seção "Components" com o checklist do `15-component-specification.md` aplicado aos 6 componentes; seção "Foundation" corrigida (EventBus/Http estavam marcados como pendentes desde CH01, embora entregues em CH01-006/007 — documento nunca tinha sido revisado desde então)
+- `docs/roadmap/00-roadmap.md`: Capítulo 03 marcado como Concluído
+- `PROJECT_STATUS.md`: v0.3.0-components move de "Próxima Release" para "Release Atual — Concluída"; Capítulo 03 ganha seção própria (mesmo padrão dos Capítulos 01/02)
+- Pendência conhecida, não fabricada como resolvida: acessibilidade dos 6 componentes está documentada, mas não validada com ferramenta/teste manual (teclado, contraste, leitor de tela)
+
+---
+
+## Release
+
+### v0.3.0-components
+
+Capítulo 03 encerrado — 6 componentes (Button, Badge, Card, Alert, Breadcrumb, Modal) + auditoria da implementação concluída.

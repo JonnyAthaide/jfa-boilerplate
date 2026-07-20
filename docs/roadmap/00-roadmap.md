@@ -75,7 +75,7 @@ Construir os componentes reutilizáveis de interface (HTML, SCSS, JS e README pr
 
 Status
 
-🟡 Em andamento (Auditoria da implementação ainda pendente — ver PROJECT_STATUS.md)
+✅ Concluído
 
 ---
 

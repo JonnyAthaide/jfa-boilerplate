@@ -65,40 +65,33 @@ Commits
 
 ---
 
-## Próxima Release
+## Release Atual
 
-🚧 v0.3.0-components
+✅ v0.3.0-components
 
 Status
 
-Release v0.3.0 — Components
+Concluída
 
-✅ Commit 01
-Refatoração da estrutura da documentação
+---
 
-✅ Commit 02
-Formalização da Arquitetura
+## Capítulo 03 — Components
 
-⏳ Commit 03
-Auditoria da implementação
+Status
 
-✅ CH03-001
-Button — primeiro componente (HTML, SCSS, JS, README)
+✅ Concluído
 
-✅ CH03-002
-Badge — variantes text-bg-* + brand/neutral (HTML, SCSS, JS, README)
+Commits
 
-✅ CH03-003
-Card — header/body/footer + card-hover (HTML, SCSS, JS, README)
-
-✅ CH03-004
-Alert — dismissible + brand/neutral (HTML, SCSS, JS, README)
-
-✅ CH03-005
-Breadcrumb — setItems() dinâmico (HTML, SCSS, JS, README)
-
-✅ CH03-006
-Modal — open/close/toggle sobre bootstrap.Modal (HTML, SCSS, JS, README)
+✔ Commit 01 — Refatoração da estrutura da documentação
+✔ Commit 02 — Formalização da Arquitetura
+✔ Commit 03 — Auditoria da implementação (`docs/audits/history.md`)
+✔ CH03-001 — Button (HTML, SCSS, JS, README)
+✔ CH03-002 — Badge — variantes text-bg-* + brand/neutral
+✔ CH03-003 — Card — header/body/footer + card-hover
+✔ CH03-004 — Alert — dismissible + brand/neutral
+✔ CH03-005 — Breadcrumb — setItems() dinâmico
+✔ CH03-006 — Modal — open/close/toggle sobre bootstrap.Modal
 
 ---
 
