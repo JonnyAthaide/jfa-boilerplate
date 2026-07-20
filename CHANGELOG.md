@@ -785,3 +785,25 @@ Quarta pendência conhecida para v1.0 (ver release v0.7.0).
 - **De propósito fora do escopo**: `.btn-brand`/`.btn-neutral`/`.text-bg-brand`/`.text-bg-neutral` (Button/Badge) não ganharam tratamento escuro — usam fundo sólido e opaco, contraste interno não depende do tema da página, já confirmado correto na auditoria de acessibilidade
 - Contraste WCAG conferido nos novos valores de `.alert-brand`/`.alert-neutral` (dark) e no texto de Header (dark) — todos passam AA com boa margem
 - PROJECT_STATUS/roadmap atualizados
+
+---
+
+## Manutenção — Mecanismo de montagem de Page via Router
+
+Quarta e última das pendências originais registradas na release v0.7.0 (a correção do `README.md` foi um achado à parte, fora dessa lista).
+
+#### Fixed
+
+- `Router.register()` (`src/foundation/router/Router.js`): substitui o handler se o `path` já estava registrado, em vez de empilhar duplicata que `navigate()` (usa `.find()`, sempre pega o primeiro match) nunca alcançaria — bug real que travava a própria feature pedida, não uma mudança cosmética
+
+#### Added
+
+- `src/main.js` passa a usar o retorno de `bootstrap()` (antes descartado): registra a rota `/` pra montar `src/pages/Home/Home.html` (importado via `?raw` do Vite) dentro de `#page-outlet`, usando `Router.register()` + `Dom.html()` — ambos já existentes no Foundation, nada novo precisou ser criado lá
+- Nova seção no sandbox (`index.html`) com `#page-outlet` — primeira demo do sandbox que não é markup estático: o conteúdo aparece via execução de JS de verdade
+
+#### Documentation
+
+- A ligação Router↔Page **não vive dentro do Foundation** (`App.js`) — importar uma Page específica ali violaria a própria regra do Foundation ("nunca deve conter CSS específico de páginas"). Vive em `main.js`, que já é a raiz de composição do projeto
+- `docs/architecture/18-page-specification.md`/`11-router.md`/`src/pages/Home/README.md` atualizados, removendo a "lacuna conhecida" que não é mais verdade
+- **Verificado com execução real, não só leitura de código**: rodei o bundle compilado via `jsdom` (`runScripts` + `import()` direto do arquivo gerado) e confirmei que `#page-outlet` recebe o HTML da Home em runtime — primeira vez neste projeto que dá pra verificar comportamento de JS de verdade, não só análise estática
+- PROJECT_STATUS/roadmap atualizados — todas as 4 pendências originais registradas na release v0.7.0 resolvidas

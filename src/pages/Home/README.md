@@ -21,4 +21,6 @@ Regra de negócio real
 
 Requisições
 
-Roteamento (não há mecanismo de montagem de página via Router ainda — ver `18-page-specification.md`)
+## Montagem via Router
+
+`src/main.js` registra a rota `/` pra montar este HTML dentro de `#page-outlet` (ver seção "Router → Page" no sandbox, `index.html`) — usando `Router.register()` + `Dom.html()`, ambos já existentes no Foundation. Ver `18-page-specification.md` pra como o mecanismo funciona e por que ele não vive dentro do Foundation.

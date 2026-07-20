@@ -8,6 +8,16 @@ export class Router {
     }
 
     register(path, handler) {
+
+        const index = this.routes.findIndex(
+            route => route.path === path
+        );
+
+        if (index !== -1) {
+            this.routes[index] = new Route(path, handler);
+            return;
+        }
+
         this.routes.push(
             new Route(path, handler)
         );

@@ -136,5 +136,7 @@ Status
 - Migração `@import` → `@use`/`@forward`: ✅ já concluída (Capítulo 03/04), adiantada em relação ao plano original
 - ~~Acessibilidade dos Components/Layout: documentada, não validada~~ — 🟢 validada por análise estática (axe-core/jsdom) + cálculo exato de contraste WCAG; falta só teste real de teclado/leitor de tela com navegador (ver `docs/audits/history.md`)
 - ~~Tokens de dark mode: não existem~~ — ✅ Header/Footer/Sidebar/Hero + Alert brand/neutral cobertos; Button/Badge de propósito fora (ver `theme-switcher/README.md`)
-- Mecanismo de montagem de Page via Router: não existe (`Home` é referência estática, não ligada a nenhuma rota)
+- ~~Mecanismo de montagem de Page via Router: não existe~~ — ✅ `main.js` monta `Home.html` em `#page-outlet` via `Router.register()`/`Dom.html()`; corrigido bug real em `Router.register()` (verificado com execução real via `jsdom`)
 - ~~jQuery: dependência não usada em lugar nenhum do código~~ — ✅ removida (bundle JS caiu de 172.58 kB pra 84.26 kB)
+
+**Todas as 4 pendências originais da release v0.7.0 estão resolvidas** (`README.md` desatualizado, achado à parte durante a remoção do jQuery, também já foi corrigido). O que falta pra v1.0 de verdade: teste real de teclado/leitor de tela com navegador (indisponível neste ambiente) e formalizar o congelamento de API pública.

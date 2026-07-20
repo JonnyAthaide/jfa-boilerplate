@@ -210,8 +210,10 @@ Commits
 
 - ~~Acessibilidade dos Components/Layout: documentada, não validada~~ — 🟢 validada por análise estática (axe-core/jsdom) + cálculo exato de contraste WCAG para os tokens `brand`/`neutral`; todos os pares passam AA. Segue faltando: teste real de teclado/leitor de tela com navegador (indisponível neste ambiente) — ver `docs/audits/history.md`
 - ~~Tokens de dark mode: não existem~~ — ✅ Header/Footer/Sidebar/Hero + `.alert-brand`/`.alert-neutral` ganharam `[data-bs-theme="dark"]`; `.btn-brand`/`.text-bg-brand`/etc. ficam de propósito sem tratamento (fundo sólido, não depende do tema) — ver `theme-switcher/README.md`
-- Mecanismo de montagem de Page via Router: não existe
+- ~~Mecanismo de montagem de Page via Router: não existe~~ — ✅ `main.js` registra `/` pra montar `Home.html` em `#page-outlet`; corrigido bug real em `Router.register()` (não substituía rota existente); verificado com execução real via `jsdom`
 - ~~jQuery: dependência não usada em lugar nenhum do código~~ — ✅ removida
+
+**As 4 pendências originais da release v0.7.0 estão todas resolvidas.**
 
 ---
 
@@ -228,3 +230,6 @@ Releases, roadmap, hierarquia de documentação e Known Issues batendo com o est
 
 ✅ Tokens de Dark Mode
 Header/Footer/Sidebar/Hero + Alert brand/neutral cobertos; Button/Badge brand/neutral de propósito fora (fundo sólido); `$color-surface-dark`/`$color-border-dark` (ociosos desde CH02-002) conectados
+
+✅ Mecanismo de montagem de Page via Router
+`Router.register()` corrigido (substituía duplicata, `navigate()` nunca alcançava); `main.js` monta `Home.html` em `#page-outlet`; verificado com execução real via `jsdom`, não só leitura de código
