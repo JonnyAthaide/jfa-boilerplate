@@ -1,3 +1,5 @@
+@use "../../design-system/abstracts" as *;
+
 .text-bg-brand {
     color: color-contrast($color-brand);
     background-color: $color-brand;

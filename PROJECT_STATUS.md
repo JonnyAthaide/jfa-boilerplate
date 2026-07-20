@@ -99,3 +99,10 @@ Breadcrumb — setItems() dinâmico (HTML, SCSS, JS, README)
 
 ✅ CH03-006
 Modal — open/close/toggle sobre bootstrap.Modal (HTML, SCSS, JS, README)
+
+---
+
+## Manutenção
+
+✅ Migração Sass Modules (@use/@forward)
+Todo o Design System + `src/components` migrados de `@import` para `@use`/`@forward`; bug de customização do Bootstrap (`notes/bugs.md`) corrigido na raiz

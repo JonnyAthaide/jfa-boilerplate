@@ -495,3 +495,23 @@
 
 - PROJECT_STATUS atualizado
 - Bug de ordem de import do Bootstrap (customização de cor/fonte não aplicada) registrado em `notes/bugs.md`, segue pendente — ainda não corrigido
+
+---
+
+## Manutenção — Migração Sass Modules (@use/@forward)
+
+#### Changed
+
+- Todo o Design System e `src/components/_index.scss` migrados de `@import` (legado) para `@use`/`@forward` (Sass modules), conforme já previsto para v1.0 no roadmap — adiantado por resolver, na raiz, o bug de customização do Bootstrap
+- `src/design-system/abstracts/_variables.scss` reescrito: em vez de reatribuir nomes de variável do Bootstrap (dependia de ordem textual de import), passa a usar `@forward "bootstrap/scss/bootstrap" show button-variant, color-contrast, tint-color, shade-color, $prefix with (...)` — configuração explícita, que falha a build em vez de ignorar em silêncio se uma variável não existir no Bootstrap
+- Correção incidental: `_variables.scss` antigo tinha uma segunda declaração de `$font-family-base: system-ui, sans-serif` sobrepondo o token de `_typography.scss` (`"Inter", sans-serif`); removida — a fonte do Design System passa a ser aplicada corretamente
+
+#### Fixed
+
+- Bug de ordem de import do Bootstrap (`notes/bugs.md`) — corrigido
+- Warnings de deprecation do Dart Sass para `@import` no código do próprio projeto — eliminados (os avisos `[import]` que restam no build vêm de dentro de `node_modules/bootstrap`, cujo código-fonte ainda não migrou para `@use`/`@forward`; fora do nosso controle)
+
+#### Documentation
+
+- `notes/bugs.md` atualizado — bug marcado como corrigido
+- PROJECT_STATUS atualizado

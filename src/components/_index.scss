@@ -1,6 +1,6 @@
-@import "button/button";
-@import "badge/badge";
-@import "card/card";
-@import "alert/alert";
-@import "breadcrumb/breadcrumb";
-@import "modal/modal";
+@forward "button/button";
+@forward "badge/badge";
+@forward "card/card";
+@forward "alert/alert";
+@forward "breadcrumb/breadcrumb";
+@forward "modal/modal";

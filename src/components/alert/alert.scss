@@ -1,3 +1,5 @@
+@use "../../design-system/abstracts" as *;
+
 .alert-brand {
     --#{$prefix}alert-color: #{shade-color($color-brand, 60%)};
     --#{$prefix}alert-bg: #{tint-color($color-brand, 80%)};

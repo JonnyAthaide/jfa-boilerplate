@@ -1,16 +1,14 @@
-@import "bootstrap/scss/bootstrap";
+@use "abstracts" as *;
 
-@import "abstracts";
+@use "base/reset";
+@use "base/base";
 
-@import "base/reset";
-@import "base/base";
+@use "layout/layout";
 
-@import "layout/layout";
+@use "components/components" as design-system-components;
 
-@import "components/components";
+@use "utilities";
 
-@import "utilities";
+@use "pages/home";
 
-@import "pages/home";
-
-@import "../components";
+@use "../components" as components;
