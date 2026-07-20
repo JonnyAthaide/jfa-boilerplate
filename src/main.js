@@ -1,5 +1,6 @@
 import "./design-system/main.scss";
 import "./components";
+import "./layouts";
 
 import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";

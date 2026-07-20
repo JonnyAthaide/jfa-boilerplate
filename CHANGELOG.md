@@ -538,3 +538,37 @@
 ### v0.3.0-components
 
 Capítulo 03 encerrado — 6 componentes (Button, Badge, Card, Alert, Breadcrumb, Modal) + auditoria da implementação concluída.
+
+---
+
+# v0.4.0-layout
+
+## Capítulo 04 — Layout
+
+> Em desenvolvimento
+
+---
+
+### Documentação prévia
+
+#### Added
+
+- `docs/architecture/16-layout-specification.md`: contrato oficial das peças de Layout, espelhando `15-component-specification.md` (estrutura `layout-name/.html/.scss/.js/README.md`, dependências, responsividade em vez de estados/variantes, acessibilidade)
+
+#### Changed
+
+- `docs/architecture/14-folder-structure.md`: nota esclarecendo que `layouts/` contém as peças granulares (Header, Footer, Navbar, etc.) e que `DefaultLayout`/`AdminLayout` (templates completos) chegam só com o Capítulo de Pages
+- `docs/roadmap/00-roadmap.md`: Layout inserido como Capítulo 04, antes de Features — a Constituição já definia essa ordem (`Foundation → Design System → Layout → Components → Features`) e `06-features.md` lista Layout como dependência de Features; o roadmap colocava os dois na ordem errada
+
+---
+
+### CH04-001
+
+#### Added
+
+- Header — primeira peça de Layout (HTML, SCSS, JS, README), branding + navegação principal
+- `src/layouts/` — novo diretório, com barrel `index.js`/`_index.scss` conectado em `main.js`/`main.scss` (mesmo padrão de `src/components`)
+
+#### Documentation
+
+- PROJECT_STATUS atualizado

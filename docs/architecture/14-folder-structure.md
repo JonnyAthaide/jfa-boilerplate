@@ -198,10 +198,14 @@ Nenhuma Feature deve depender diretamente de outra Feature.
 
 Layouts reutilizáveis.
 
+Contém as peças granulares de composição (Header, Footer, Sidebar, Navbar, Hero, Main, Section — ver `04-layout.md` e `16-layout-specification.md`), uma pasta por peça, no mesmo formato dos Components.
+
 Exemplos:
 
 - DefaultLayout
 - AdminLayout
+
+> `DefaultLayout`/`AdminLayout` são templates de página completa, compostos a partir das peças granulares acima — chegam junto do Capítulo de Pages, não fazem parte do Capítulo de Layout.
 
 ---
 

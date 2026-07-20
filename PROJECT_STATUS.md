@@ -99,3 +99,24 @@ Commits
 
 ✅ Migração Sass Modules (@use/@forward)
 Todo o Design System + `src/components` migrados de `@import` para `@use`/`@forward`; bug de customização do Bootstrap (`notes/bugs.md`) corrigido na raiz
+
+---
+
+## Próxima Release
+
+🚧 v0.4.0-layout
+
+Status
+
+Release v0.4.0 — Layout
+
+## Capítulo 04 — Layout
+
+Status
+
+🟡 Em andamento
+
+Commits
+
+✔ Documentação prévia — `16-layout-specification.md` + esclarecimentos em `14-folder-structure.md`/`00-roadmap.md`
+✔ CH04-001 — Header (HTML, SCSS, JS, README)
