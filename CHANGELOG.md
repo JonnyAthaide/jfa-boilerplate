@@ -807,3 +807,33 @@ Quarta e última das pendências originais registradas na release v0.7.0 (a corr
 - `docs/architecture/18-page-specification.md`/`11-router.md`/`src/pages/Home/README.md` atualizados, removendo a "lacuna conhecida" que não é mais verdade
 - **Verificado com execução real, não só leitura de código**: rodei o bundle compilado via `jsdom` (`runScripts` + `import()` direto do arquivo gerado) e confirmei que `#page-outlet` recebe o HTML da Home em runtime — primeira vez neste projeto que dá pra verificar comportamento de JS de verdade, não só análise estática
 - PROJECT_STATUS/roadmap atualizados — todas as 4 pendências originais registradas na release v0.7.0 resolvidas
+
+---
+
+# v1.0.0
+
+## Capítulo 07 — Release (fechamento)
+
+Primeira versão pronta pra iniciar um projeto real (Hashi Sushi) em cima do framework.
+
+---
+
+### Release
+
+#### Changed
+
+- `package.json`: `0.7.0` → `1.0.0`
+
+#### Documentation
+
+- `docs/roadmap/00-roadmap.md`: seção "O que 'API pública congelada' significa aqui" — este projeto é privado (não publicado no npm), então "congelar API" não é promessa semver de pacote publicado; significa que os barrels (`src/components`, `src/layouts`, `src/features`, `src/foundation`) e os contratos em `docs/architecture/15` a `18-*-specification.md` são a superfície estável pra construir o Hashi Sushi em cima
+- **Pendência genuína, não escondida**: teste real de teclado/leitor de tela com navegador (Playwright ou similar) segue indisponível neste ambiente de trabalho. A validação estática (axe-core via `jsdom` + cálculo exato de contraste WCAG) cobre ARIA/landmarks/headings/contraste, mas não substitui ouvir um leitor de tela de verdade. Decisão registrada (2026-07-20): fechar v1.0.0 com a validação atual — documentado como próximo passo, não bloqueador
+- PROJECT_STATUS atualizado
+
+---
+
+## Release
+
+### v1.0.0
+
+Tag `v1.0.0` marca a primeira versão do JFA pronta pra iniciar um projeto real em cima dela. Todos os capítulos (00 a 07) concluídos; as 4 pendências originais da v0.7.0 resolvidas; único item ainda em aberto é teste manual de acessibilidade com navegador/leitor de tela, documentado como próximo passo.

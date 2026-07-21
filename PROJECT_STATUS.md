@@ -200,7 +200,7 @@ Status
 
 ✅ Concluído
 
-Primeiro release de verdade do projeto — todos os capítulos 00–06 concluídos. Não é v1.0 ainda (ver Pendências abaixo).
+Primeiro release de verdade do projeto — todos os capítulos 00–06 concluídos.
 
 Commits
 
@@ -214,6 +214,20 @@ Commits
 - ~~jQuery: dependência não usada em lugar nenhum do código~~ — ✅ removida
 
 **As 4 pendências originais da release v0.7.0 estão todas resolvidas.**
+
+---
+
+## Release Atual
+
+✅ v1.0.0
+
+Status
+
+Concluída
+
+Primeira versão pronta pra iniciar um projeto real (Hashi Sushi) em cima do framework. "API pública congelada" aqui significa: os barrels (`src/components`, `src/layouts`, `src/features`, `src/foundation`) e os contratos em `docs/architecture/15` a `18-*-specification.md` são a superfície estável — este projeto é privado (não publicado no npm), então não é uma promessa semver de pacote publicado.
+
+**Pendência genuína, não escondida**: teste real de teclado/leitor de tela com navegador (Playwright ou similar) — indisponível neste ambiente de trabalho. A validação estática (axe-core via `jsdom` + cálculo exato de contraste WCAG) cobre ARIA/landmarks/headings/contraste, mas não substitui ouvir um leitor de tela de verdade. Decisão registrada (2026-07-20): fechar v1.0.0 com a validação atual, documentando isso como próximo passo, não bloqueador — ver `docs/roadmap/00-roadmap.md`.
 
 ---
 
