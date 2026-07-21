@@ -13,3 +13,24 @@
     --#{$prefix}alert-border-color: #{tint-color($color-neutral, 60%)};
     --#{$prefix}alert-link-color: #{shade-color($color-neutral, 60%)};
 }
+
+// Em modo claro, tint(80%)/shade(60%) cria um alerta "clareado" (fundo quase
+// branco). Em modo escuro isso destoa da página — troca pra shade(80%)/tint(40%),
+// mesma fórmula que o Bootstrap usa pros próprios *-bg-subtle-dark/*-text-emphasis-dark.
+[data-bs-theme="dark"] {
+
+    .alert-brand {
+        --#{$prefix}alert-color: #{tint-color($color-brand, 40%)};
+        --#{$prefix}alert-bg: #{shade-color($color-brand, 80%)};
+        --#{$prefix}alert-border-color: #{shade-color($color-brand, 40%)};
+        --#{$prefix}alert-link-color: #{tint-color($color-brand, 40%)};
+    }
+
+    .alert-neutral {
+        --#{$prefix}alert-color: #{tint-color($color-neutral, 40%)};
+        --#{$prefix}alert-bg: #{shade-color($color-neutral, 80%)};
+        --#{$prefix}alert-border-color: #{shade-color($color-neutral, 40%)};
+        --#{$prefix}alert-link-color: #{tint-color($color-neutral, 40%)};
+    }
+
+}

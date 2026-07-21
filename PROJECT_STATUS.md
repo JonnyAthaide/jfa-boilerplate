@@ -200,7 +200,7 @@ Status
 
 ✅ Concluído
 
-Primeiro release de verdade do projeto — todos os capítulos 00–06 concluídos. Não é v1.0 ainda (ver Pendências abaixo).
+Primeiro release de verdade do projeto — todos os capítulos 00–06 concluídos.
 
 Commits
 
@@ -208,7 +208,42 @@ Commits
 
 ## Pendências conhecidas para v1.0
 
-- Acessibilidade dos Components/Layout: documentada, não validada com ferramenta/teste manual
-- Tokens de dark mode: não existem — `ThemeSwitcher` alterna `data-bs-theme`, mas `brand`/`neutral` não têm contraparte escura
-- Mecanismo de montagem de Page via Router: não existe
-- jQuery: dependência não usada em lugar nenhum do código, segue no `package.json`
+- ~~Acessibilidade dos Components/Layout: documentada, não validada~~ — 🟢 validada por análise estática (axe-core/jsdom) + cálculo exato de contraste WCAG para os tokens `brand`/`neutral`; todos os pares passam AA. Segue faltando: teste real de teclado/leitor de tela com navegador (indisponível neste ambiente) — ver `docs/audits/history.md`
+- ~~Tokens de dark mode: não existem~~ — ✅ Header/Footer/Sidebar/Hero + `.alert-brand`/`.alert-neutral` ganharam `[data-bs-theme="dark"]`; `.btn-brand`/`.text-bg-brand`/etc. ficam de propósito sem tratamento (fundo sólido, não depende do tema) — ver `theme-switcher/README.md`
+- ~~Mecanismo de montagem de Page via Router: não existe~~ — ✅ `main.js` registra `/` pra montar `Home.html` em `#page-outlet`; corrigido bug real em `Router.register()` (não substituía rota existente); verificado com execução real via `jsdom`
+- ~~jQuery: dependência não usada em lugar nenhum do código~~ — ✅ removida
+
+**As 4 pendências originais da release v0.7.0 estão todas resolvidas.**
+
+---
+
+## Release Atual
+
+✅ v1.0.0
+
+Status
+
+Concluída
+
+Primeira versão pronta pra iniciar um projeto real (Hashi Sushi) em cima do framework. "API pública congelada" aqui significa: os barrels (`src/components`, `src/layouts`, `src/features`, `src/foundation`) e os contratos em `docs/architecture/15` a `18-*-specification.md` são a superfície estável — este projeto é privado (não publicado no npm), então não é uma promessa semver de pacote publicado.
+
+**Pendência genuína, não escondida**: teste real de teclado/leitor de tela com navegador (Playwright ou similar) — indisponível neste ambiente de trabalho. A validação estática (axe-core via `jsdom` + cálculo exato de contraste WCAG) cobre ARIA/landmarks/headings/contraste, mas não substitui ouvir um leitor de tela de verdade. Decisão registrada (2026-07-20): fechar v1.0.0 com a validação atual, documentando isso como próximo passo, não bloqueador — ver `docs/roadmap/00-roadmap.md`.
+
+---
+
+## Manutenção
+
+✅ Auditoria de Acessibilidade
+`docs/audits/history.md` ganhou seção própria (metodologia, achados, pendências reais); corrigido `landmark-unique` duplicado no sandbox; `.gitignore` ganhou `.vite`
+
+✅ Remoção do jQuery
+Bundle JS caiu de 172.58 kB pra 84.26 kB (gzip: 57.12 kB → 25.58 kB); `README.md` desatualizado achado nesse processo, fica como pendência a decidir
+
+✅ README.md atualizado
+Releases, roadmap, hierarquia de documentação e Known Issues batendo com o estado real do projeto
+
+✅ Tokens de Dark Mode
+Header/Footer/Sidebar/Hero + Alert brand/neutral cobertos; Button/Badge brand/neutral de propósito fora (fundo sólido); `$color-surface-dark`/`$color-border-dark` (ociosos desde CH02-002) conectados
+
+✅ Mecanismo de montagem de Page via Router
+`Router.register()` corrigido (substituía duplicata, `navigate()` nunca alcançava); `main.js` monta `Home.html` em `#page-outlet`; verificado com execução real via `jsdom`, não só leitura de código

@@ -20,3 +20,19 @@
         color: $color-text;
     }
 }
+
+[data-bs-theme="dark"] {
+
+    .sidebar {
+        border-right-color: $color-border-dark;
+    }
+
+    .sidebar__link {
+        color: $color-text-muted-dark;
+
+        &:hover {
+            color: $color-text-dark;
+        }
+    }
+
+}

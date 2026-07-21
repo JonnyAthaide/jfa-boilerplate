@@ -17,3 +17,15 @@
     font-size: $font-size-lg;
     color: $color-text-muted;
 }
+
+[data-bs-theme="dark"] {
+
+    .hero__title {
+        color: $color-text-dark;
+    }
+
+    .hero__text {
+        color: $color-text-muted-dark;
+    }
+
+}

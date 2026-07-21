@@ -1,7 +1,7 @@
 {
     "name": "jfa",
     "private": true,
-    "version": "0.7.0",
+    "version": "1.0.0",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -10,8 +10,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.8",
-        "bootstrap-icons": "^1.13.1",
-        "jquery": "^3.7.1"
+        "bootstrap-icons": "^1.13.1"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.21",

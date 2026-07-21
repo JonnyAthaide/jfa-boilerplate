@@ -337,7 +337,7 @@
             <div class="header__brand">
               <a href="/" class="header__logo">JFA</a>
             </div>
-            <nav class="header__nav" aria-label="Principal">
+            <nav class="header__nav" aria-label="Principal (Home)">
               <a href="#" class="header__link">Home</a>
             </nav>
           </header>
@@ -366,6 +366,44 @@
           </footer>
 
         </div>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Dark mode</h2>
+
+        <div data-bs-theme="dark" style="background: #212529; padding: 1.5rem;">
+
+          <header class="header">
+            <div class="header__brand">
+              <a href="/" class="header__logo">JFA</a>
+            </div>
+            <nav class="header__nav" aria-label="Principal (Dark mode)">
+              <a href="#" class="header__link">Home</a>
+            </nav>
+          </header>
+
+          <div class="alert alert-brand alert-dismissible fade show mt-3" role="alert">
+            Brand alert (dark)
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <div class="alert alert-neutral" role="alert">
+            Neutral alert (dark)
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="sandbox-section">
+
+        <h2>Router → Page (demo ao vivo)</h2>
+
+        <p><em>Diferente de todo o resto desta página: aqui embaixo o conteúdo não está colado à mão. O `main.js` registra a rota <code>/</code> pra montar <code>src/pages/Home/Home.html</code> dentro do elemento abaixo via <code>Router.register()</code> + <code>Dom.html()</code> — se aparecer alguma coisa, o mecanismo está funcionando de verdade.</em></p>
+
+        <div id="page-outlet" style="border: 2px dashed var(--bs-border-color); min-height: 4rem;"></div>
 
       </section>
 

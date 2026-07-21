@@ -36,8 +36,13 @@ Regra de negócio
 
 Requisições
 
-**Tokens de cor escuros do Design System**: os tokens em `_colors.scss` (e as variantes `brand`/`neutral` dos Components) ainda são só modo claro — o Bootstrap nativo adapta seus próprios componentes ao escurecer `data-bs-theme`, mas `.text-bg-brand`/`.btn-brand`/`.alert-brand`/etc. não têm contraparte escura ainda. Ficaria pra quando o Design System definir tokens dark.
+## Cobertura de dark mode
+
+- **Nativo do Bootstrap** (`.btn-primary`, `.alert-success`, `.card`, `.modal`, `.navbar` etc.): se adapta sozinho — `$primary`/`$secondary`/etc. já apontam pros tokens do JFA, e o Bootstrap deriva as variantes escuras automaticamente.
+- **`.alert-brand`/`.alert-neutral`**: têm bloco `[data-bs-theme="dark"]` próprio (`src/components/alert/alert.scss`), com a mesma fórmula que o Bootstrap usa pros `-bg-subtle-dark` nativos.
+- **Header/Footer/Sidebar/Hero** (`src/layouts/`): têm bloco `[data-bs-theme="dark"]` próprio, usando os tokens `$color-text-dark`/`$color-text-muted-dark`/`$color-border-dark`.
+- **`.btn-brand`/`.btn-neutral`/`.text-bg-brand`/`.text-bg-neutral`** (Button/Badge): **de propósito sem tratamento escuro** — usam fundo sólido e opaco, então o contraste interno (texto vs. fundo do próprio botão/badge) não depende do tema da página. Funcionam iguais em claro e escuro.
 
 ## Acessibilidade
 
-Nenhum comportamento de foco/anúncio próprio — a troca de tema é puramente visual. Contraste em modo escuro depende do Bootstrap nativo (ver limitação acima para as variantes customizadas).
+Nenhum comportamento de foco/anúncio próprio — a troca de tema é puramente visual. Contraste em modo escuro verificado (cálculo WCAG) pros tokens que o JFA controla — ver `docs/audits/history.md`.

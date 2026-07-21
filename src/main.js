@@ -6,7 +6,14 @@ import "./features";
 import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import { bootstrap } from "./foundation";
+import { bootstrap, Dom } from "./foundation";
+import homeHtml from "./pages/Home/Home.html?raw";
 
 
-bootstrap();
+const app = bootstrap();
+
+const outlet = Dom.query("#page-outlet");
+
+if (outlet) {
+    app.router.register("/", () => Dom.html(outlet, homeHtml));
+}

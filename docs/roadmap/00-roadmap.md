@@ -125,16 +125,27 @@ Objetivo
 
 Congelar APIs públicas e preparar a próxima grande versão do framework.
 
-Escopo desta rodada: bump de versão (`package.json` → `0.7.0`) e tag `v0.7.0` em `master`, marcando o primeiro release de verdade do projeto (todos os capítulos 00–06 concluídos). Não é a versão 1.0 ainda — essa segue em aberto pra quando o framework estiver pronto pra congelar API de verdade (ver pendências abaixo).
-
 Status
 
 ✅ Concluído
 
-## Pendências conhecidas para v1.0 (não resolvidas nesta release)
+## Histórico da release
 
-- Migração `@import` → `@use`/`@forward`: ✅ já concluída (Capítulo 03/04), adiantada em relação ao plano original
-- Acessibilidade dos Components/Layout: documentada, não validada com ferramenta/teste manual
-- Tokens de dark mode: não existem — `ThemeSwitcher` alterna `data-bs-theme`, mas variantes `brand`/`neutral` não têm contraparte escura
-- Mecanismo de montagem de Page via Router: não existe (`Home` é referência estática, não ligada a nenhuma rota)
-- jQuery: dependência não usada em lugar nenhum do código, segue no `package.json`
+**v0.7.0** — primeiro release de verdade do projeto (todos os capítulos 00–06 concluídos), com 4 pendências conhecidas registradas.
+
+**v1.0.0** — as 4 pendências da v0.7.0 resolvidas (ver abaixo); fechada como a primeira versão pronta pra iniciar um projeto real (Hashi Sushi) em cima do framework.
+
+- Migração `@import` → `@use`/`@forward`: ✅ concluída (Capítulo 03/04), adiantada em relação ao plano original
+- Acessibilidade dos Components/Layout: 🟢 validada por análise estática (axe-core/jsdom) + cálculo exato de contraste WCAG — ver `docs/audits/history.md`
+- Tokens de dark mode: ✅ Header/Footer/Sidebar/Hero + Alert brand/neutral cobertos; Button/Badge de propósito fora (ver `theme-switcher/README.md`)
+- Mecanismo de montagem de Page via Router: ✅ `main.js` monta `Home.html` em `#page-outlet` via `Router.register()`/`Dom.html()`, verificado com execução real via `jsdom`
+- jQuery: ✅ removido (bundle JS caiu de 172.58 kB pra 84.26 kB)
+- `README.md` desatualizado (achado à parte durante a remoção do jQuery): ✅ corrigido
+
+## O que "API pública congelada" significa aqui
+
+Este projeto é um boilerplate privado (`"private": true`, não publicado no npm) — "congelar API" não é uma promessa semver de pacote publicado. Significa: os barrels (`src/components`, `src/layouts`, `src/features`, `src/foundation`) e os contratos documentados em `docs/architecture/15` a `18-*-specification.md` são a superfície estável a partir da qual o Hashi Sushi (ou qualquer outro projeto consumidor) deve ser construído.
+
+## Pendência genuína, não escondida
+
+**Teste real de teclado/leitor de tela**: precisa de navegador de verdade (Playwright ou similar), indisponível neste ambiente de trabalho. A validação estática (axe-core via `jsdom` + cálculo exato de contraste WCAG) cobre ARIA/landmarks/headings/contraste, mas não substitui ouvir um leitor de tela de verdade. Decisão registrada (2026-07-20): fechar v1.0.0 com a validação estática atual, documentando isso como próximo passo — não como bloqueador. Pra fazer esse teste no futuro: `npm install -D playwright && npx playwright install chromium`, depois rodar `axe-core` contra a página renderizada de verdade (resolve a limitação de contraste do `jsdom`) e testar navegação por Tab manualmente.

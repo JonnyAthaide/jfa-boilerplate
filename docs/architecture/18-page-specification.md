@@ -55,6 +55,24 @@ Cada `README.md` de Page deve deixar explícito que é referência/demo, não um
 
 ---
 
-# Lacuna conhecida, não escondida
+# Montagem via Router
 
-Não existe hoje nenhum mecanismo no `Router`/`App` (`src/foundation`) que monte uma Page no DOM a partir de uma rota — o `Router.navigate()` atual só executa uma função qualquer. Ligar uma Page de verdade a uma rota é trabalho de Foundation (um mecanismo de renderização), não desta especificação. As Pages aqui são artefatos de referência (HTML composto), no mesmo espírito dos `.html` de referência que Components e Layout já têm — nenhum dos dois é injetado automaticamente em lugar nenhum hoje.
+`Router.register(path, handler)` (Foundation) já aceita um handler arbitrário, e `Dom.html(element, html)` (Foundation) já injeta HTML num elemento — o mecanismo de montagem não precisou de nada novo no Foundation, só ligar as duas peças no lugar certo.
+
+**Essa ligação não vive dentro do Foundation** (`src/foundation/app/App.js`) — importar uma Page específica ali violaria a própria regra do Foundation ("nunca deve conter... CSS específico de páginas", `02-foundation.md`). Ela vive em `src/main.js`, que já é, na prática, a raiz de composição do projeto (onde Components/Layouts/Features/Foundation se juntam):
+
+```js
+import { bootstrap, Dom } from "./foundation";
+import homeHtml from "./pages/Home/Home.html?raw";
+
+const app = bootstrap();
+const outlet = Dom.query("#page-outlet");
+
+if (outlet) {
+    app.router.register("/", () => Dom.html(outlet, homeHtml));
+}
+```
+
+Um projeto consumidor real registraria suas próprias rotas do mesmo jeito, a partir do próprio ponto de entrada — nunca de dentro do Foundation.
+
+Verificado com execução real (não só leitura de código): rodar o bundle compilado via `jsdom` confirma que `#page-outlet` recebe o HTML da Home em runtime.

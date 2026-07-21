@@ -720,3 +720,120 @@ Primeiro release de verdade do projeto — todos os capítulos 00 a 06 concluíd
 ### v0.7.0-release
 
 Capítulo 07 encerrado. Tag `v0.7.0` marca o primeiro release de verdade do projeto em `master`.
+
+---
+
+## Manutenção — Auditoria de Acessibilidade
+
+Ataca a primeira pendência conhecida para v1.0 (ver release v0.7.0 acima).
+
+#### Fixed
+
+- `index.html` (sandbox): dois `<nav aria-label="Principal">` na mesma página (demo do Header sozinho + dentro da composição Home) — leitor de tela não distinguia. Segundo vira `aria-label="Principal (Home)"`
+- `.gitignore`: faltava `.vite` (cache do Vite, achado como pasta não rastreada durante o trabalho)
+
+#### Documentation
+
+- `docs/audits/history.md`: nova seção "Acessibilidade (Capítulo 07)" — metodologia (axe-core + jsdom pra ARIA/landmarks/headings, cálculo exato de contraste WCAG pros tokens `brand`/`neutral`, revisão manual de operabilidade por teclado), achados corrigidos, e o que segue genuinely não verificado (teste real de teclado/leitor de tela precisa de navegador, indisponível neste ambiente)
+- Todos os pares de cor `brand`/`neutral` (Button/Badge/Alert) confirmados dentro do WCAG AA (4.5:1) — nenhum ajuste de cor foi necessário
+- `card/README.md` já orientava corretamente o nível de heading (não precisou de mudança); `modal/README.md` ganhou uma nota explicando por que `aria-hidden-focus` aparece em análise estática mas não é problema real em runtime
+- Nenhuma interação de clique-só-em-`<div>` encontrada em Components/Layout/Features — operabilidade por teclado depende só de elementos nativos, sem gap
+- PROJECT_STATUS/roadmap atualizados: pendência de acessibilidade sai de "não validada" para "validada por análise estática + cálculo de contraste — teste real de teclado/leitor de tela segue pendente"
+
+---
+
+## Manutenção — Remoção do jQuery
+
+Segunda pendência conhecida para v1.0 atacada (ver release v0.7.0).
+
+#### Removed
+
+- Dependência `jquery` do `package.json` — não era usada em lugar nenhum do código (confirmado via busca antes de remover), Bootstrap 5 não depende dela
+- `window.$`/`window.jQuery` (`src/foundation/index.js`) e o registro `this.plugins.register("jquery", window.jQuery)` (`src/foundation/app/App.js`)
+
+#### Changed
+
+- `README.md`: jQuery sai da lista de Stack
+
+#### Fixed
+
+- Bundle JS: **172.58 kB → 84.26 kB** (gzip 57.12 kB → 25.58 kB) — jQuery era quase metade do peso do bundle final
+
+#### Documentation
+
+- Achado ao investigar onde jQuery era mencionado: `README.md` da raiz está bem desatualizado (tabela de releases parada em v0.3.0, link errado pro `PROJECT_STATUS.md`, tabela de hierarquia de documentação referenciando arquivos antigos de antes da reorganização pra `docs/architecture/`, "Known Issues" ainda citando o bug do `@import` já corrigido) — fora do escopo desta mudança, fica registrado como pendência a decidir
+
+---
+
+## Manutenção — Tokens de Dark Mode
+
+Quarta pendência conhecida para v1.0 (ver release v0.7.0).
+
+#### Added
+
+- `$color-text-dark`/`$color-text-muted-dark` (`_colors.scss`) — espelham a mesma fórmula do Bootstrap pros próprios `$body-color-dark`/`$body-secondary-color-dark`
+- `[data-bs-theme="dark"]` em Header, Footer, Sidebar e Hero (`src/layouts/`) — únicos Layouts que usavam cor de texto/borda fixa (Sass, não `var(--bs-*)`), então não reagiam ao tema
+- `[data-bs-theme="dark"]` em `.alert-brand`/`.alert-neutral` — troca `tint(80%)/shade(60%)` (clareado, assume fundo branco) por `shade(80%)/tint(40%)`, mesma fórmula que o Bootstrap usa pros próprios `*-bg-subtle-dark`/`*-text-emphasis-dark`
+
+#### Changed
+
+- `_variables.scss`: `$body-color-dark`/`$body-bg-dark`/`$border-color-dark` do Bootstrap passam a apontar pros tokens do JFA (`$color-text-dark`/`$color-surface-dark`/`$color-border-dark`) — os dois últimos já existiam desde o CH02-002 e nunca tinham sido usados
+- `theme-switcher/README.md`: nota de limitação reescrita — não é mais "brand/neutral sem contraparte escura" (impreciso), detalha exatamente o que foi coberto e o que ficou de fora por decisão
+
+#### Documentation
+
+- **De propósito fora do escopo**: `.btn-brand`/`.btn-neutral`/`.text-bg-brand`/`.text-bg-neutral` (Button/Badge) não ganharam tratamento escuro — usam fundo sólido e opaco, contraste interno não depende do tema da página, já confirmado correto na auditoria de acessibilidade
+- Contraste WCAG conferido nos novos valores de `.alert-brand`/`.alert-neutral` (dark) e no texto de Header (dark) — todos passam AA com boa margem
+- PROJECT_STATUS/roadmap atualizados
+
+---
+
+## Manutenção — Mecanismo de montagem de Page via Router
+
+Quarta e última das pendências originais registradas na release v0.7.0 (a correção do `README.md` foi um achado à parte, fora dessa lista).
+
+#### Fixed
+
+- `Router.register()` (`src/foundation/router/Router.js`): substitui o handler se o `path` já estava registrado, em vez de empilhar duplicata que `navigate()` (usa `.find()`, sempre pega o primeiro match) nunca alcançaria — bug real que travava a própria feature pedida, não uma mudança cosmética
+
+#### Added
+
+- `src/main.js` passa a usar o retorno de `bootstrap()` (antes descartado): registra a rota `/` pra montar `src/pages/Home/Home.html` (importado via `?raw` do Vite) dentro de `#page-outlet`, usando `Router.register()` + `Dom.html()` — ambos já existentes no Foundation, nada novo precisou ser criado lá
+- Nova seção no sandbox (`index.html`) com `#page-outlet` — primeira demo do sandbox que não é markup estático: o conteúdo aparece via execução de JS de verdade
+
+#### Documentation
+
+- A ligação Router↔Page **não vive dentro do Foundation** (`App.js`) — importar uma Page específica ali violaria a própria regra do Foundation ("nunca deve conter CSS específico de páginas"). Vive em `main.js`, que já é a raiz de composição do projeto
+- `docs/architecture/18-page-specification.md`/`11-router.md`/`src/pages/Home/README.md` atualizados, removendo a "lacuna conhecida" que não é mais verdade
+- **Verificado com execução real, não só leitura de código**: rodei o bundle compilado via `jsdom` (`runScripts` + `import()` direto do arquivo gerado) e confirmei que `#page-outlet` recebe o HTML da Home em runtime — primeira vez neste projeto que dá pra verificar comportamento de JS de verdade, não só análise estática
+- PROJECT_STATUS/roadmap atualizados — todas as 4 pendências originais registradas na release v0.7.0 resolvidas
+
+---
+
+# v1.0.0
+
+## Capítulo 07 — Release (fechamento)
+
+Primeira versão pronta pra iniciar um projeto real (Hashi Sushi) em cima do framework.
+
+---
+
+### Release
+
+#### Changed
+
+- `package.json`: `0.7.0` → `1.0.0`
+
+#### Documentation
+
+- `docs/roadmap/00-roadmap.md`: seção "O que 'API pública congelada' significa aqui" — este projeto é privado (não publicado no npm), então "congelar API" não é promessa semver de pacote publicado; significa que os barrels (`src/components`, `src/layouts`, `src/features`, `src/foundation`) e os contratos em `docs/architecture/15` a `18-*-specification.md` são a superfície estável pra construir o Hashi Sushi em cima
+- **Pendência genuína, não escondida**: teste real de teclado/leitor de tela com navegador (Playwright ou similar) segue indisponível neste ambiente de trabalho. A validação estática (axe-core via `jsdom` + cálculo exato de contraste WCAG) cobre ARIA/landmarks/headings/contraste, mas não substitui ouvir um leitor de tela de verdade. Decisão registrada (2026-07-20): fechar v1.0.0 com a validação atual — documentado como próximo passo, não bloqueador
+- PROJECT_STATUS atualizado
+
+---
+
+## Release
+
+### v1.0.0
+
+Tag `v1.0.0` marca a primeira versão do JFA pronta pra iniciar um projeto real em cima dela. Todos os capítulos (00 a 07) concluídos; as 4 pendências originais da v0.7.0 resolvidas; único item ainda em aberto é teste manual de acessibilidade com navegador/leitor de tela, documentado como próximo passo.

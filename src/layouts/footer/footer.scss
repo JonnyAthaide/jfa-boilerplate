@@ -6,3 +6,12 @@
     color: $color-text-muted;
     font-size: $font-size-sm;
 }
+
+[data-bs-theme="dark"] {
+
+    .footer {
+        border-top-color: $color-border-dark;
+        color: $color-text-muted-dark;
+    }
+
+}
